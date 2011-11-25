@@ -32,8 +32,8 @@ Copyright & License
 ===================
 
 
-Copyright(C) 2011 Youhei SASAKI <uwabami%40gfd-dennou.org>, All rights reserved.
-License: GPL-2+
+ * Copyright(C) 2011 Youhei SASAKI <uwabami@gfd-dennou.org>, All rights reserved.
+ * License: GPL-2+
 
 	This program is free software; you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
