@@ -130,10 +130,7 @@
      (font-lock-regexp-grouping-construct ((t (:foreground ,ctdp:blue))))
      (show-paren-match ((t (:background ,ctdp:blue-1))))
      (c-annotation-face ((t (:inherit font-lock-constant-face))))
-
      (lazy-highlight ((t (:foreground ,ctdp:black :background ,ctdp:yellow+1))))
-
-
      )))
 (set-face-italic-p 'italic nil)
 (set-face-bold-p 'bold nil)

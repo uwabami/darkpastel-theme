@@ -9,7 +9,7 @@ My color-theme for Emacs.
 ScreenShot
 ==========
 
-![ScreenShot](https://github.com/uwabami/color-theme-darkpastel/blob/master/color-theme-darkpastel-screenshot.png)
+![ScreenShot](https://github.com/uwabami/color-theme-darkpastel/blob/master/color-theme-darkpastel-screenshot.png?raw=true)
 
 
 Usage
