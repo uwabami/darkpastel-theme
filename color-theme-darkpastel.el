@@ -105,7 +105,7 @@
      (bold ((t (:weight normal ))))
      (bold-italic ((t (:italic t :bold t))))
      (modeline ((t (:background ,ctdp:black+1 :foreground ,ctdp:white+1 ))))
-     (modeline-inactive ((t (:background ,ctdp:black+1 :forground ,ctdp:black+2))))
+     (modeline-inactive ((t (:background ,ctdp:black+1 :foreground ,ctdp:black+2))))
      (secondary-selection ((t (:background ,ctdp:black-1))))
      (trailing-whitespace ((t (:background ,ctdp:red-1))))
 
@@ -131,7 +131,7 @@
      (show-paren-match ((t (:background ,ctdp:blue-1))))
      (c-annotation-face ((t (:inherit font-lock-constant-face))))
 
-     (lazy-highlight ((t (:forground ,ctdp:black :background ,ctdp:yellow+1))))
+     (lazy-highlight ((t (:foreground ,ctdp:black :background ,ctdp:yellow+1))))
 
 
      )))
