@@ -131,8 +131,159 @@
      (show-paren-match ((t (:background ,ctdp:blue-1))))
      (c-annotation-face ((t (:inherit font-lock-constant-face))))
      (lazy-highlight ((t (:foreground ,ctdp:black :background ,ctdp:yellow+1))))
+
+     ;;; muse-mode
+     (muse-bad-link ((t (:bold t :foreground "coral" :underline "coral" :weight bold))))
+     (muse-emphasis-1 ((t (:slant normal))))
+     (muse-emphasis-2 ((t (:weight normal))))
+     (muse-emphasis-3 ((t (:italic t :bold t :slant italic :weight bold))))
+     (muse-header-1 ((t (:bold t :weight bold :height 1.0 ))))
+     (muse-header-2 ((t (:bold t :weight bold :height 1.0 ))))
+     (muse-header-3 ((t (:bold t :weight bold :height 1.0 ))))
+     (muse-header-4 ((t (:bold t :weight bold :height 1.0 ))))
+     (muse-header-5 ((t (:bold t :weight bold :height 1.0 ))))
+     (muse-link ((t (:bold t :foreground "cyan" :underline "cyan" :weight bold))))
+     (muse-verbatim ((t (:foreground "gray"))))
+
+     ;; org-mode
+     (org-agenda-clocking ((t (:background "#020202"))))
+     (org-agenda-column-dateline ((t (:weight normal :slant normal :underline nil :strike-through nil :background "grey30" ))))
+     (org-agenda-current-time ((t (:foreground "LightGoldenrod"))))
+     (org-agenda-date ((t (:foreground "LightSkyBlue"))))
+     (org-agenda-date-today ((t (:italic t :bold t :foreground "LightSkyBlue" :slant italic :weight bold))))
+     (org-agenda-date-weekend ((t (:bold t :foreground "LightSkyBlue" :weight bold))))
+     (org-agenda-diary ((t (:width normal :weight normal :slant normal :underline nil :overline nil :strike-through nil :box nil :inverse-video nil :foreground "#f6f3e8" :background "unspecified-bg" :stipple nil ))))
+     (org-agenda-dimmed-todo-face ((t (:foreground "grey50"))))
+     (org-agenda-done ((t (:foreground "PaleGreen"))))
+     (org-agenda-filter-tags ((t (:box (:line-width -1 :style released-button) :foreground "#cccccc" :background "#444444"))))
+     (org-agenda-restriction-lock ((t (:background "skyblue4"))))
+     (org-agenda-structure ((t (:foreground "LightSkyBlue"))))
+     (org-archived ((t (:foreground "grey70"))))
+     (org-beamer-tag ((t (:box (:line-width 1 :color grey40)))))
+     (org-block ((t (:foreground "grey70"))))
+     (org-block-background ((t (nil))))
+     (org-block-begin-line ((t (:foreground "#888888"))))
+     (org-block-end-line ((t (:foreground "#888888"))))
+     (org-checkbox ((t (:weight normal))))
+     (org-checkbox-statistics-done ((t (:bold t :weight bold :foreground "PaleGreen"))))
+     (org-checkbox-statistics-todo ((t (:bold t :weight bold :foreground "Pink"))))
+     (org-clock-overlay ((t (:background "SkyBlue4"))))
+     (org-code ((t (:foreground "grey70"))))
+     (org-column ((t (:background "grey30" :strike-through nil :underline nil :slant normal :weight normal ))))
+     (org-column-title ((t (:bold t :background "grey30" :underline t :weight bold))))
+     (org-date ((t (:foreground "Cyan" :underline t))))
+     (org-default ((t (:width normal :weight normal :slant normal :underline nil :overline nil :strike-through nil :box nil :inverse-video nil :foreground "#f6f3e8" :background "unspecified-bg" :stipple nil ))))
+     (org-document-info ((t (:foreground "pale turquoise"))))
+     (org-document-info-keyword ((t (:foreground "grey70"))))
+     (org-document-title ((t (:bold t :foreground "pale turquoise" :weight bold ))))
+     (org-done ((t (:bold t :foreground "PaleGreen" :weight bold))))
+     (org-drawer ((t (:foreground "LightSkyBlue"))))
+     (org-ellipsis ((t (:foreground "LightGoldenrod" :underline t))))
+     (org-footnote ((t (:foreground "Cyan" :underline t))))
+     (org-formula ((t (:foreground "chocolate1"))))
+     (org-headline-done ((t (:foreground "LightSalmon"))))
+     (org-hide ((t (:foreground "black"))))
+     (org-latex-and-export-specials ((t (:foreground "burlywood"))))
+     (org-level-1 ((t (:foreground "#cc99ff"))))
+     (org-level-2 ((t (:foreground "#7f7fff"))))
+     (org-level-3 ((t (:foreground "#ff7f7f"))))
+     (org-level-4 ((t (:foreground "#888888"))))
+     (org-level-5 ((t (:foreground "#ffff7f"))))
+     (org-level-6 ((t (:foreground "#ffbf7f"))))
+     (org-level-7 ((t (:foreground "#bf7fff"))))
+     (org-level-8 ((t (:foreground "#7fff7f"))))
+     (org-link ((t (:underline t :foreground "cyan1"))))
+     (org-meta-line ((t (:foreground "#888888"))))
+     (org-mode-line-clock ((t (:box (:line-width -1 :style released-button) :foreground "#cccccc" :background "#444444"))))
+     (org-mode-line-clock-overrun ((t (:box (:line-width -1 :style released-button) :foreground "#cccccc" :background "red"))))
+     (org-property-value ((t (nil))))
+     (org-quote ((t (:foreground "grey70"))))
+     (org-scheduled ((t (:foreground "PaleGreen"))))
+     (org-scheduled-previously ((t (:foreground "chocolate1"))))
+     (org-scheduled-today ((t (:foreground "PaleGreen"))))
+     (org-sexp-date ((t (:foreground "Cyan"))))
+     (org-special-keyword ((t (:foreground "#ff7f7f"))))
+     (org-table ((t (:foreground "LightSkyBlue"))))
+     (org-tag ((t (:bold t :weight bold))))
+     (org-target ((t (:underline t))))
+     (org-time-grid ((t (:foreground "LightGoldenrod"))))
+     (org-todo ((t (:bold t :foreground "Pink" :weight bold))))
+     (org-upcoming-deadline ((t (:foreground "chocolate1"))))
+     (org-verbatim ((t (:foreground "grey70"))))
+     (org-verse ((t (:foreground "grey70"))))
+     (org-warning ((t (:foreground "#ff7fff"))))
+
+
+     ;;; Wanderlust
+     ;; header
+     (wl-highlight-message-subject-header-contents  ((t (:foreground "#e5786d" :bold t))))
+     (wl-highlight-message-from-header-contents ((t (:foreground "#cae682" :bold t))))
+     (wl-highlight-message-important-header-contents  ((t (:foreground "violet" :bold t))))
+     (wl-highlight-message-unimportant-header-contents ((t (:foreground "gray75" :bold t))))
+     (wl-highlight-message-date-header-contents ((t (:foreground "#95e454" :bold t))))
+     (wl-highlight-message-headers ((t (:foreground "cyan" :bold t))))
+     (wl-highlight-message-header-contents ((t (:foreground "gray75" :bold nil))))
+     ;; citation
+     (wl-highlight-message-citation-header ((t (:foreground "#95e454"))))
+     (wl-highlight-message-cited-text-1 ((t (:foreground "#95e454"))))
+     (wl-highlight-message-cited-text-2 ((t (:foreground "cyan"))))
+     (wl-highlight-message-cited-text-3 ((t (:foreground "violet"))))
+     (wl-highlight-message-cited-text-4 ((t (:foreground "#cae682"))))
+     (wl-highlight-message-cited-text-5 ((t (:foreground "#e57865"))))
+     ;; (wl-highlight-message-cited-text-6
+     ;;                 ((t (:foreground "PaleVioletRed"))))
+     ;; (wl-highlight-message-cited-text-7
+     ;;                 ((t (:foreground "LightPink"))))
+     ;; (wl-highlight-message-cited-text-8
+     ;;                 ((t (:foreground "salmon"))))
+     ;; (wl-highlight-message-cited-text-9
+     ;;                 ((t (:foreground "SandyBrown"))))
+     ;; (wl-highlight-message-cited-text-10
+     ;;                 ((t (:foreground "wheat"))))
+     ;; not 署名には色をつけない
+     (wl-highlight-message-signature ((t (:foreground "#f6f3e8"))))
+
+     ;; summary
+     ;; サマリでスレッドトップのメッセージ行の face
+     (wl-highlight-summary-thread-top-face ((t (:foreground "#f6f3e8"))))
+     ;; サマリでスレッドトップではないメッセージ行の face
+     (wl-highlight-summary-normal-face ((t (:foreground "#f6f3e8"))))
+     ;; サマリで新規マークのついたメッセージ行の face
+     (wl-highlight-summary-new-face ((t (:foreground "tomato"))))
+     ;; サマリで未読マークのついたメッセージ行の face
+     (wl-highlight-summary-unread-face ((t (:foreground "tomato"))))
+     ;; サマリで重要マークのついたメッセージ行の face
+     (wl-highlight-summary-important-face ((t (:foreground "cyan"))))
+     ;; サマリで現在表示中のメッセージ行の face
+     (wl-highlight-summary-displaying-face ((t (:underline t :bold t))))
+     (wl-highlight-thread-indent-face  ((t (:underline t :bold t))))
+     ;; サマリで削除マークのついたメッセージ行の face
+     (wl-highlight-summary-deleted-face ((t (:foreground "violet"))))
+     ;; サマリでリファイルマークのついたメッセージ行の face
+     (wl-highlight-summary-refiled-face ((t (:foreground "lightgreen"))))
+     ;; サマリでまとめ処理用マーク `*' のついたメッセージ行の face
+     (wl-highlight-summary-target-face ((t (:foreground "cyan"))))
+
+     ;; folder
+     ;; フォルダモードで、未同期メッセージがないフォルダの face
+     (wl-highlight-folder-zero-face ((t (:foreground "#f6f3e8"))))
+     ;; フォルダモードで、開いたグループにつく face です。
+     (wl-highlight-folder-opened-face ((t (:foreground "cyan"))))
+     ;; フォルダモードで、未同期メッセージがなくて
+     ;; 未読メッセージがあるフォルダの face
+     (wl-highlight-folder-unread-face ((t (:foreground "RoyalBlue"))))
+     ;; フォルダモードで、いくつ未同期メッセージがあるか分らないフォルダ
+     ;; の face
+     (wl-highlight-folder-unknown-face ((t (:foreground "cyan"))))
+     ;; フォルダモードで、未同期メッセージが少しあるフォルダの face
+     (wl-highlight-folder-few-face ((t (:foreground "red"))))
+     ;; フォルダモードで、未同期メッセージがたくさんあるフォルダの face
+     (wl-highlight-folder-many-face ((t (:foreground "brightred"))))
+     ;;;
      )))
+;; disable bold, italic
 (set-face-italic-p 'italic nil)
 (set-face-bold-p 'bold nil)
+
 (provide 'color-theme-darkpastel)
 ;;; template.el ends here
