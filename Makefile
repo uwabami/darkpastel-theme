@@ -9,7 +9,6 @@ all: $(ELCFILES)
 %.elc: %.el
 	@$(EMACS) -q -no-site-file --batch \
 		-f batch-byte-compile $<
-#		--eval '(setq max(-l COMPILE -batch -f batch-byte-compile $<
 
 clean:
 	rm -f $(ELCFILES)
