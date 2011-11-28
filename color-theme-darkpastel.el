@@ -24,7 +24,10 @@
 
 ;; requires
 (eval-when-compile
-  (require 'color-theme))
+  (require 'color-theme)
+  (setq max-specpdl-size 6000)
+  (setq max-lisp-eval-depth 1000)
+  )
 
 ;; color definitions
 (defvar ctdp:fg             "#f6f3e8")
@@ -92,20 +95,21 @@
         (background-color . ,ctdp:black))
       (foreground-color . ,ctdp:white)
       (border-color .     ,ctdp:black)
-      (mouse-color .      ,ctdp:black))
+      (mouse-color .      ,ctdp:black)
+      )
      ;; basic coloring
      (default ((t (:foreground ,ctdp:white))))
      (cursor ((t (:foreground ,ctdp:white+1))))
      (escape-glyph-face ((t (:foreground ,ctdp:red))))
      (fringe ((t (:foreground ,ctdp:white :background ,ctdp:black))))
      (header-line ((t (:foreground ,ctdp:yellow :background ,ctdp:black-1))))
-     (highlight ((t ((:background ,ctdp:black+1)))))
      (region ((t (:background ,ctdp:blue-2))))
      (italic ((t (:slant normal ))))
      (bold ((t (:weight normal ))))
      (bold-italic ((t (:italic nil :bold nil :weight normal :slant normal))))
      (modeline ((t (:background ,ctdp:black+1 :foreground ,ctdp:white+1 ))))
      (modeline-inactive ((t (:background ,ctdp:black+1 :foreground ,ctdp:black+2))))
+     (minibuffer-prompt ((t (:foreground ,ctdp:purple ))))
      (secondary-selection ((t (:background ,ctdp:black-1))))
      (trailing-whitespace ((t (:background ,ctdp:red-1))))
 
@@ -131,6 +135,7 @@
      (show-paren-match ((t (:background ,ctdp:blue-1))))
      (c-annotation-face ((t (:inherit font-lock-constant-face))))
      (lazy-highlight ((t (:foreground ,ctdp:black :background ,ctdp:yellow+1))))
+     (highlight ((t ((:background ,ctdp:lightgreen)))))
 
      ;;; muse-mode
      (muse-bad-link ((t (:bold t :foreground "coral" :underline "coral" :weight normal))))
@@ -213,7 +218,6 @@
      (org-verse ((t (:foreground "grey70"))))
      (org-warning ((t (:foreground "#ff7fff"))))
 
-
      ;;; Wanderlust
      ;; header
      (wl-highlight-message-subject-header-contents  ((t (:foreground "#e5786d" :bold t))))
@@ -242,7 +246,6 @@
      ;;                 ((t (:foreground "wheat"))))
      ;; not 署名には色をつけない
      (wl-highlight-message-signature ((t (:foreground "#f6f3e8"))))
-
      ;; summary
      ;; サマリでスレッドトップのメッセージ行の face
      (wl-highlight-summary-thread-top-face ((t (:foreground "#f6f3e8"))))
@@ -263,7 +266,6 @@
      (wl-highlight-summary-refiled-face ((t (:foreground "lightgreen"))))
      ;; サマリでまとめ処理用マーク `*' のついたメッセージ行の face
      (wl-highlight-summary-target-face ((t (:foreground "cyan"))))
-
      ;; folder
      ;; フォルダモードで、未同期メッセージがないフォルダの face
      (wl-highlight-folder-zero-face ((t (:foreground "#f6f3e8"))))
@@ -280,6 +282,7 @@
      ;; フォルダモードで、未同期メッセージがたくさんあるフォルダの face
      (wl-highlight-folder-many-face ((t (:foreground "brightred"))))
      ;;;
+
      )))
 ;; disable bold, italic
 (set-face-italic-p 'italic nil)
