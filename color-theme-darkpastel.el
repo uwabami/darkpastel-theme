@@ -24,62 +24,7 @@
 
 ;; requires
 (eval-when-compile
-  (require 'color-theme)
-  (setq max-specpdl-size 6000)
-  (setq max-lisp-eval-depth 1000)
-  )
-
-;; color definitions
-(defvar ctdp:fg             "#f6f3e8")
-(defvar ctdp:bg             "#242424")
-(defvar ctdp:black-1        "#020202")
-(defvar ctdp:black          "#242424")
-(defvar ctdp:black+1        "#444444")
-(defvar ctdp:black+2        "#555555")
-(defvar ctdp:black+3        "#666666")
-(defvar ctdp:gray           "#888888")
-(defvar ctdp:gray+1         "#99968b")
-(defvar ctdp:red-1          "#e5786d")
-(defvar ctdp:red            "#ff7f7f")
-(defvar ctdp:red+1          "#ff9999")
-(defvar ctdp:green          "#7fff7f")
-(defvar ctdp:green+1        "#ccff99")
-(defvar ctdp:lightgreen     "#7fffbf")
-(defvar ctdp:lightgreen+1   "#99ffcc")
-(defvar ctdp:yellow         "#ffff7f")
-(defvar ctdp:yellow+1       "#ffff99")
-(defvar ctdp:orange         "#ffbf7f")
-(defvar ctdp:orange+1       "#ffcc99")
-(defvar ctdp:blue-2         "#435869")
-(defvar ctdp:blue-1         "#7b68ee")
-(defvar ctdp:blue           "#7f7fff")
-(defvar ctdp:blue+1         "#9999ff")
-(defvar ctdp:purple         "#bf7fff")
-(defvar ctdp:purple+1       "#cc99ff")
-(defvar ctdp:cyan           "#7fbfff")
-(defvar ctdp:cyan+1         "#99ccff")
-(defvar ctdp:lightcyan      "#7fffff")
-(defvar ctdp:lightcyan+1    "#99ffff")
-(defvar ctdp:magenta        "#ff7fff")
-(defvar ctdp:magenta+1      "#ff99ff")
-(defvar ctdp:lightmagenta   "#ff7fbf")
-(defvar ctdp:lightmagenta+1 "#ff99cc")
-(defvar ctdp:white          "#f6f3e8")
-(defvar ctdp:white+1        "#cccccc")
-(defvar ctdp:white+2        "#e6e6e6")
-
-(eval-after-load 'term
-  '(setq ansi-term-color-vector
-         (vector
-          'unspecified
-          ctdp:black
-          ctdp:red
-          ctdp:grean
-          ctdp:blue
-          ctdp:magenta
-          ctdp:cyan
-          ctdp:white
-          )))
+  (require 'color-theme))
 
 (defun color-theme-darkpastel ()
   "my color theme - dark background + pastel font-lock
@@ -93,52 +38,51 @@
       ;; for transparent terminal
       (cond
        (window-system
-        (background-color . ,ctdp:black))
+        (background-color . "#242424"))
        (t
         (background-color . "unspecified-bg")))
-      (foreground-color . ,ctdp:white)
-      (border-color .     ,ctdp:black)
-      (mouse-color .      ,ctdp:black)
+      (foreground-color . "#f6f3e8")
+      (border-color .     "#242424")
+      (mouse-color .      "#242424")
       )
      ;; basic coloring
-     (default ((t (:stipple nil :foreground ,ctdp:white :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal ))))
-     (cursor ((t (:foreground ,ctdp:white+1))))
-     (escape-glyph-face ((t (:foreground ,ctdp:red))))
-     (fringe ((t (:foreground ,ctdp:white :background ,ctdp:black))))
-     (header-line ((t (:foreground ,ctdp:yellow :background ,ctdp:black-1))))
-     (region ((t (:background ,ctdp:blue-2))))
-     (italic ((t (:underline t ))))
-     (bold ((t (:bold t :weight bold))))
-     (bold-italic ((t (:italic t :bold t :slant italic :weight bold))))
-     (modeline ((t (:background ,ctdp:black+1 :foreground ,ctdp:white+1 ))))
-     (modeline-inactive ((t (:background ,ctdp:black+1 :foreground ,ctdp:black+2))))
-     (minibuffer-prompt ((t (:foreground ,ctdp:purple ))))
-     (secondary-selection ((t (:background ,ctdp:black-1))))
-     (trailing-whitespace ((t (:background ,ctdp:red-1))))
-
-     ;; basic font-lock settings
-     (font-lock-builtin-face ((t (:foreground ,ctdp:purple))))
-     (font-lock-comment-face ((t (:foreground ,ctdp:gray))))
-     (font-lock-comment-delimiter-face ((t (:foreground ,ctdp:gray))))
-     (font-lock-constant-face ((t (:foreground ,ctdp:orange))))
-     (font-lock-doc-face ((t (:foreground ,ctdp:black+3))))
-     (font-lock-doc-string-face ((t (:foreground ,ctdp:black+1))))
-     (font-lock-function-name-face ((t (:foreground ,ctdp:purple+1))))
-     (font-lock-keyword-face ((t (:foreground ,ctdp:red))))
-     (font-lock-negation-char-face ((t (:foreground ,ctdp:lightgreen+1))))
-     (font-lock-preprocessor-face ((t (:foreground ,ctdp:red-1))))
-     (font-lock-string-face ((t (:foreground ,ctdp:green))))
-     (font-lock-type-face ((t (:foreground ,ctdp:yellow))))
-     (font-lock-variable-name-face ((t (:foreground ,ctdp:blue))))
-     (font-lock-warning-face ((t (:foreground ,ctdp:magenta))))
-     (font-lock-reference-face ((t (:foreground ,ctdp:blue-1))))
-     (font-lock-link-face ((t (:foreground ,ctdp:cyan))))
-     (font-lock-regexp-grouping-backslash ((t (:foreground ,ctdp:orange+1))))
-     (font-lock-regexp-grouping-construct ((t (:foreground ,ctdp:blue))))
-     (show-paren-match ((t (:background ,ctdp:blue-1))))
+     (default ((t (:foreground "#f6f3e8"))))
+     (cursor ((t (:background "#f6f3e8" :foreground "#242424"))))
+     (region ((t (:background "#435869"))))
+     (mode-line ((t (:background "#444444" :foreground "#cccccc"))))
+     (mode-line-inactive ((t (:background "#444444" :foreground "#555555"))))
+     (fringe ((t (:background "#242424"))))
+     (minibuffer-prompt ((t (:background "#242424" :foreground "#bf7fff"))))
+     (isearch ((t (:foreground "#9999ff"))))
+     (lazy-highlight ((t (:background "#ffff99" :foreground "#242424"))))
+     (highlight ((t ((:background "#7fffbf")))))
+     (link ((t (:foreground "#7fbfff"))))
+     (link-visited ((t (:foreground "#7fbfff"))))
+     (button ((t (:underline t))))
+     (header-line ((t (:background "#020202" :foreground "#ffff7f"))))
+     (show-paren-match ((t (:background "#435869"))))
+     ;; basic font-lock
+     (font-lock-builtin-face ((t (:foreground "#bf7fff"))))
+     (font-lock-comment-face ((t (:foreground "#888888"))))
+     (font-lock-comment-delimiter-face ((t (:foreground "#888888"))))
+     (font-lock-constant-face ((t (:foreground "#ffbf7f"))))
+     (font-lock-function-name-face ((t (:foreground "#cc99ff"))))
+     (font-lock-negation-char-face ((t (:foreground "#99ccff"))))
+     (font-lock-preprocessor-face ((t (:foreground "#ff6666"))))
+     (font-lock-keyword-face ((t (:foreground "#ff7f7f"))))
+     (font-lock-string-face ((t (:foreground "#7fff7f"))))
+     (font-lock-type-face ((t (:foreground "#ffff7f"))))
+     (font-lock-variable-name-face ((t (:foreground "#7f7fff"))))
+     (font-lock-warning-face ((t (:foreground "#ff7fff"))))
+     (font-lock-reference-face ((t (:foreground "#7b68ee"))))
+     (font-lock-link-face ((t (:foreground "7fbfff"))))
+     (font-lock-regexp-grouping-backslash ((t (:foreground "#ffcc99"))))
+     (font-lock-regexp-grouping-construct ((t (:foreground "#7f7fff"))))
      (c-annotation-face ((t (:inherit font-lock-constant-face))))
-     (lazy-highlight ((t (:foreground ,ctdp:black :background ,ctdp:yellow+1))))
-     (highlight ((t ((:background ,ctdp:lightgreen)))))
+     ;; italic, bold
+     (italic ((t (:italic nil :slant normal ))))
+     (bold ((t (:bold nil :weight normal))))
+     (bold-italic ((t (:italic nil :bold nil :slant normal :weight normal ))))
 
      ;;; Wanderlust
      ;; header
@@ -204,7 +148,7 @@
      ;; フォルダモードで、未同期メッセージがたくさんあるフォルダの face
      (wl-highlight-folder-many-face ((t (:foreground "brightred"))))
      ;;;
-
      )))
+
 (provide 'color-theme-darkpastel)
 ;;; template.el ends here
