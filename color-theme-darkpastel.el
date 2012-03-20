@@ -133,6 +133,8 @@
      (bold-italic ((t (:italic nil :bold nil :slant normal :weight normal ))))
 
      ;;; Wanderlust
+     ;;
+     (wl-highlight-demo-face ((t (nil))))
      ;; header
      (wl-highlight-message-subject-header-contents  ((t (:foreground ,pastel-red :bold t))))
      (wl-highlight-message-from-header-contents ((t (:foreground ,pastel-yellow :bold t))))
@@ -194,6 +196,23 @@
      (outline-7 ((t (:foreground ,pastel-darkblue))))
      (outline-8 ((t (:foreground ,pastel-grey-1))))
      ;; howm
+     (howm-menu-key-face ((t (:foreground ,pastel-orange))))
+     (howm-menu-list-face ((t (nil))))
+     (howm-mode-keyword-face ((t (:foreground ,pastel-blue+1))))
+     (howm-mode-ref-face ((t (:foreground ,pastel-blue+1))))
+     (howm-mode-wiki-face ((t (:foreground ,pastel-blue+1))))
+     (howm-reminder-deadline-face ((t (:foreground ,pastel-red+1))))
+     (howm-reminder-defer-face ((t (:foreground ,pastel-magenta+1))))
+     (howm-reminder-done-face ((t (nil))))
+     (howm-reminder-late-deadline-face ((t (:background ,pastel-red :foreground ,pastel-black+1))))
+     (howm-reminder-normal-face ((t (:foreground ,pastel-blue))))
+     (howm-reminder-schedule-face ((t (:foreground ,pastel-green))))
+     (howm-reminder-today-face ((t (:background ,pastel-orange+1 ))))
+     (howm-reminder-todo-face ((t (:foreground ,pastel-purple))))
+     (howm-reminder-tomorrow-face ((t (:background ,pastel-pink :foreground ,pastel-black-1))))
+     (howm-view-empty-face ((t (:background ,pastel-blue))))
+     (howm-view-hilit-face ((t (:foreground ,pastel-red))))
+     (howm-view-name-face ((t (:background  ,pastel-blue :foreground ,pastel-white+1))))
      (howm-mode-title-face ((t (:foreground ,pastel-yellow))))
      (howm-mode-keyword-face ((t (:foreground ,pastel-blue))))
      (howm-mode-ref-face ((t (:foreground ,pastel-blue))))
