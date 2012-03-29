@@ -1,15 +1,15 @@
 ;; -*- mode: emacs-lisp; coding: utf-8-unix; indent-tabs-mode: nil -*-
 ;;; color-theme-darkpastel.el
-
+;;
 ;; Copyright(C) 2011 Youhei SASAKI All rights reserved.
-;; $Id: $
-
+;; $Lastupdate: 2012/03/30 03:20:23$
+;;
 ;; Author: Youhei SASAKI <uwabami@gfd-dennou.org>
-;; Keywords:
+;; License: GPL-3+
 ;;
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
-;; the Free Software Foundation, either version 2 of the License, or
+;; the Free Software Foundation, either version 3 of the License, or
 ;; (at your option) any later version.
 ;;
 ;; This program is distributed in the hope that it will be useful,
@@ -22,12 +22,8 @@
 ;;
 ;;; Code:
 
-;; requires for byte-compile
-(eval-when-compile
-  (setq max-specpdl-size 6000)
-  (setq max-lisp-eval-depth 1000))
-;; requires
-(require 'color-theme)
+(eval-and-compile
+  (require 'color-theme))
 
 ;; color defenitions
 (defvar pastel-black-1      "#242424")
@@ -65,37 +61,25 @@
 (defvar pastel-orange+1     "#ffbf7f")
 (defvar pastel-darkblue     "#483d8b")
 
-(eval-after-load 'term
-  '(setq ansi-term-color-vector
-         (vector 'unspecified pastel-black
-                 pastel-red pastel-green
-                 pastel-yellow pastel-blue
-                 pastel-magenta pastel-cyan
-                 ;; dirty fix
-                 "#ffffff")))
-
 (defun color-theme-darkpastel ()
   "my color theme - dark background + pastel font-lock
-   @see https://github.com/uwabami/color-theme-darkpastel/blob/master/color-theme-darkpastel.el"
+   @see https://github.com/uwabami/color-theme-darkpastel"
   (interactive)
   (color-theme-install
    `(color-theme-darkpastel
      ;; color-theme mapping
      (
       (background-mode . dark)
-      ;; for transparent terminal
-      (cond
-       (window-system
-        (background-color . ,pastel-black-1))
-       (t
-        (background-color . "unspecified-bg")))
+      ;; (background-color . "unspecified-bg")
+      ;; (background-color . ,pastel-black-1)
+      ;; (foreground-color . "unspecified-fg")
       (foreground-color . ,pastel-white)
       (border-color .     ,pastel-black-1)
-      (mouse-color .      ,pastel-black)
+      (mouse-color .      ,pastel-green+1)
       )
-     ;; basic coloring
+     ;; ;; basic coloring
      (default ((t (:foreground ,pastel-white))))
-     (cursor ((t (:background ,pastel-black-1 :foreground ,pastel-white))))
+     (cursor ((t (:background ,pastel-green ))))
      (region ((t (:background ,pastel-darkblue))))
      (mode-line ((t (:background ,pastel-black :foreground ,pastel-grey+1))))
      (mode-line-inactive ((t (:background ,pastel-black-1 :foreground ,pastel-grey))))
@@ -107,8 +91,9 @@
      (link ((t (:foreground ,pastel-lightblue+1))))
      (link-visited ((t (:foreground ,pastel-lightblue+1))))
      (button ((t (:underline t))))
-     (header-line ((t (:background ,pastel-black+1 :foreground ,pastel-yellow+1))))
+     (header-line ((t (:foreground ,pastel-yellow+1))))
      (show-paren-match ((t (:background ,pastel-darkblue))))
+     (show-paren-mismatch ((t (:background ,pastel-purple :foreground ,pastel-white))))
      ;; basic font-lock
      (font-lock-builtin-face ((t (:foreground ,pastel-blue+1))))
      (font-lock-comment-face ((t (:foreground ,pastel-grey-1))))
@@ -133,7 +118,6 @@
      (bold-italic ((t (:italic nil :bold nil :slant normal :weight normal ))))
 
      ;;; Wanderlust
-     ;;
      (wl-highlight-demo-face ((t (nil))))
      ;; header
      (wl-highlight-message-subject-header-contents  ((t (:foreground ,pastel-red :bold t))))
@@ -177,46 +161,68 @@
      (wl-highlight-folder-few-face ((t (:foreground ,pastel-red))))
      (wl-highlight-folder-many-face ((t (:foreground ,pastel-pink+1))))
 
-     ;;; org-mode
-     (org-level-1 ((t (:foreground ,pastel-yellow+1))))
-     (org-level-2 ((t (:foreground ,pastel-red+1))))
-     (org-level-3 ((t (:foreground ,pastel-blue+1))))
-     (org-level-4 ((t (:foreground ,pastel-green+1))))
-     (org-level-5 ((t (:foreground ,pastel-orange+1))))
-     (org-level-6 ((t (:foreground ,pastel-magenta+1))))
-     (org-level-7 ((t (:foreground ,pastel-darkblue))))
-     (org-level-8 ((t (:foreground ,pastel-grey-1))))
-     ;;; outline
-     (outline-1 ((t (:foreground ,pastel-yellow+1))))
-     (outline-2 ((t (:foreground ,pastel-red+1))))
-     (outline-3 ((t (:foreground ,pastel-blue+1))))
-     (outline-4 ((t (:foreground ,pastel-green+1))))
-     (outline-6 ((t (:foreground ,pastel-orange+1))))
-     (outline-5 ((t (:foreground ,pastel-magenta+1))))
-     (outline-7 ((t (:foreground ,pastel-darkblue))))
-     (outline-8 ((t (:foreground ,pastel-grey-1))))
-     ;; howm
-     (howm-menu-key-face ((t (:foreground ,pastel-orange))))
-     (howm-menu-list-face ((t (nil))))
-     (howm-mode-keyword-face ((t (:foreground ,pastel-blue+1))))
-     (howm-mode-ref-face ((t (:foreground ,pastel-blue+1))))
-     (howm-mode-wiki-face ((t (:foreground ,pastel-blue+1))))
-     (howm-reminder-deadline-face ((t (:foreground ,pastel-red+1))))
-     (howm-reminder-defer-face ((t (:foreground ,pastel-magenta+1))))
-     (howm-reminder-done-face ((t (nil))))
-     (howm-reminder-late-deadline-face ((t (:background ,pastel-red :foreground ,pastel-black+1))))
-     (howm-reminder-normal-face ((t (:foreground ,pastel-blue))))
-     (howm-reminder-schedule-face ((t (:foreground ,pastel-green))))
-     (howm-reminder-today-face ((t (:background ,pastel-orange+1 ))))
-     (howm-reminder-todo-face ((t (:foreground ,pastel-purple))))
-     (howm-reminder-tomorrow-face ((t (:background ,pastel-pink :foreground ,pastel-black-1))))
-     (howm-view-empty-face ((t (:background ,pastel-blue))))
-     (howm-view-hilit-face ((t (:foreground ,pastel-red))))
-     (howm-view-name-face ((t (:background  ,pastel-blue :foreground ,pastel-white+1))))
-     (howm-mode-title-face ((t (:foreground ,pastel-yellow))))
-     (howm-mode-keyword-face ((t (:foreground ,pastel-blue))))
-     (howm-mode-ref-face ((t (:foreground ,pastel-blue))))
-     (action-lock-face ((t (:underline t :foreground ,pastel-blue))))
+     ;; ;; anything
+     ;; ;; (anything-apt-installed ((t (:foreground "green"))))
+     ;; ;; (anything-bmkext-file ((t (:foreground "Deepskyblue2"))))
+     ;; ;; (anything-bmkext-gnus ((t (:foreground "magenta"))))
+     ;; ;; (anything-bmkext-info ((t (:foreground "green"))))
+     ;; ;; (anything-bmkext-man ((t (:foreground "Orange4"))))
+     ;; ;; (anything-bmkext-no--file ((t (:foreground "grey"))))
+     ;; ;; (anything-bmkext-w3m ((t (:foreground "yellow"))))
+     ;; ;; (anything-bookmarks-su-face ((t (:foreground "red"))))
+     ;; ;; (anything-dir-heading ((t (:background "Pink" :foreground "Blue"))))
+     ;; ;; (anything-dir-priv ((t (:background "LightGray" :foreground "DarkRed"))))
+     ;; ;; (anything-dired-symlink-face ((t (:foreground "DarkOrange"))))
+     ;; ;; (anything-emms-playlist ((t (:foreground "Springgreen4" :underline t))))
+     ;; ;; (anything-ffiles-prefix-face ((t (:background "yellow" :foreground "black"))))
+     ;; ;; (anything-file-name ((t (:foreground "Blue"))))
+     ;; ;; (anything-gentoo-match-face ((t (:foreground "red"))))
+     ;; ;; (anything-header ((t (:underline t :inverse-video nil :background "grey75" :foreground "black" :box (:line-width -1 :style released-button)))))
+     ;; ;; (anything-isearch-match ((t (:background "Yellow"))))
+     ;; ;; (anything-overlay-line-face ((t (:background "IndianRed4" :underline t))))
+     ;; ;; (anything-visible-mark ((t (:background "green1" :foreground "black"))))
+     ;; ;; (anything-w3m-bookmarks-face ((t (:foreground "cyan1" :underline t))))
+
+     ;; ;; ;;; org-mode
+     ;; ;; (org-level-1 ((t (:foreground ,pastel-yellow+1))))
+     ;; ;; (org-level-2 ((t (:foreground ,pastel-red+1))))
+     ;; ;; (org-level-3 ((t (:foreground ,pastel-blue+1))))
+     ;; ;; (org-level-4 ((t (:foreground ,pastel-green+1))))
+     ;; ;; (org-level-5 ((t (:foreground ,pastel-orange+1))))
+     ;; ;; (org-level-6 ((t (:foreground ,pastel-magenta+1))))
+     ;; ;; (org-level-7 ((t (:foreground ,pastel-darkblue))))
+     ;; ;; (org-level-8 ((t (:foreground ,pastel-grey-1))))
+     ;; ;; ;;; outline
+     ;; ;; (outline-1 ((t (:foreground ,pastel-yellow+1))))
+     ;; ;; (outline-2 ((t (:foreground ,pastel-red+1))))
+     ;; ;; (outline-3 ((t (:foreground ,pastel-blue+1))))
+     ;; ;; (outline-4 ((t (:foreground ,pastel-green+1))))
+     ;; ;; (outline-6 ((t (:foreground ,pastel-orange+1))))
+     ;; ;; (outline-5 ((t (:foreground ,pastel-magenta+1))))
+     ;; ;; (outline-7 ((t (:foreground ,pastel-darkblue))))
+     ;; ;; (outline-8 ((t (:foreground ,pastel-grey-1))))
+     ;; ;; ;;; howm
+     ;; ;; (howm-menu-key-face ((t (:foreground ,pastel-orange))))
+     ;; ;; (howm-menu-list-face ((t (nil))))
+     ;; ;; (howm-mode-keyword-face ((t (:foreground ,pastel-blue+1))))
+     ;; ;; (howm-mode-ref-face ((t (:foreground ,pastel-blue+1))))
+     ;; ;; (howm-mode-wiki-face ((t (:foreground ,pastel-blue+1))))
+     ;; ;; (howm-reminder-deadline-face ((t (:foreground ,pastel-red+1))))
+     ;; ;; (howm-reminder-defer-face ((t (:foreground ,pastel-magenta+1))))
+     ;; ;; (howm-reminder-done-face ((t (nil))))
+     ;; ;; (howm-reminder-late-deadline-face ((t (:background ,pastel-red :foreground ,pastel-black+1))))
+     ;; ;; (howm-reminder-normal-face ((t (:foreground ,pastel-blue))))
+     ;; ;; (howm-reminder-schedule-face ((t (:foreground ,pastel-green))))
+     ;; ;; (howm-reminder-today-face ((t (:background ,pastel-orange+1 ))))
+     ;; ;; (howm-reminder-todo-face ((t (:foreground ,pastel-purple))))
+     ;; ;; (howm-reminder-tomorrow-face ((t (:background ,pastel-pink :foreground ,pastel-black-1))))
+     ;; ;; (howm-view-empty-face ((t (:background ,pastel-blue))))
+     ;; ;; (howm-view-hilit-face ((t (:foreground ,pastel-red))))
+     ;; ;; (howm-view-name-face ((t (:background  ,pastel-blue :foreground ,pastel-white+1))))
+     ;; ;; (howm-mode-title-face ((t (:foreground ,pastel-yellow))))
+     ;; ;; (howm-mode-keyword-face ((t (:foreground ,pastel-blue))))
+     ;; ;; (howm-mode-ref-face ((t (:foreground ,pastel-blue))))
+     ;; ;; (action-lock-face ((t (:underline t :foreground ,pastel-blue))))
 
      )))
 

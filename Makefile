@@ -13,7 +13,6 @@ all: $(ELCFILES)
 
 %.elc: %.el
 	@$(EMACS) -q -no-site-file --batch \
-		-l ~/.emacs.d/init.el \
 		-f batch-byte-compile $(CURDIR)/$<
 
 clean:
