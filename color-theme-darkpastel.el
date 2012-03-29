@@ -2,7 +2,7 @@
 ;;; color-theme-darkpastel.el
 ;;
 ;; Copyright(C) 2011 Youhei SASAKI All rights reserved.
-;; $Lastupdate: 2012/03/30 03:20:23$
+;; $Lastupdate: 2012/03/30 04:23:00$
 ;;
 ;; Author: Youhei SASAKI <uwabami@gfd-dennou.org>
 ;; License: GPL-3+
@@ -87,11 +87,11 @@
      (minibuffer-prompt ((t (:background ,pastel-black-1 :foreground ,pastel-blue+1))))
      (isearch ((t (:foreground ,pastel-blue+1))))
      (lazy-highlight ((t (:background ,pastel-yellow :foreground ,pastel-black-1))))
-     (highlight ((t ((:background ,pastel-green)))))
-     (link ((t (:foreground ,pastel-lightblue+1))))
-     (link-visited ((t (:foreground ,pastel-lightblue+1))))
+     (highlight ((t (:background ,pastel-darkblue))))
+     (link ((t (:foreground ,pastel-lightblue+1 :underline t))))
+     (link-visited ((t (:underline t :foreground ,pastel-lightblue+1))))
      (button ((t (:underline t))))
-     (header-line ((t (:foreground ,pastel-yellow+1))))
+     (header-line ((t (:foreground ,pastel-yellow+1 :background ,pastel-black :inverse-video nil :underlne t))))
      (show-paren-match ((t (:background ,pastel-darkblue))))
      (show-paren-mismatch ((t (:background ,pastel-purple :foreground ,pastel-white))))
      ;; basic font-lock
