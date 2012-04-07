@@ -2,7 +2,7 @@
 ;;; color-theme-darkpastel.el
 ;;
 ;; Copyright(C) 2011 Youhei SASAKI All rights reserved.
-;; $Lastupdate: 2012/03/30 04:23:00$
+;; $Lastupdate: 2012/04/06 23:51:17$
 ;;
 ;; Author: Youhei SASAKI <uwabami@gfd-dennou.org>
 ;; License: GPL-3+
@@ -160,6 +160,9 @@
      (wl-highlight-folder-unknown-face ((t (:foreground ,pastel-cyan))))
      (wl-highlight-folder-few-face ((t (:foreground ,pastel-red))))
      (wl-highlight-folder-many-face ((t (:foreground ,pastel-pink+1))))
+
+     ;; yaicomplete
+     (yaicomplete-completion-suffix-face ((t (:foreground ,pastel-black+1))))
 
      ;; ;; anything
      ;; ;; (anything-apt-installed ((t (:foreground "green"))))
