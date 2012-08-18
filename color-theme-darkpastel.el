@@ -2,7 +2,7 @@
 ;;; color-theme-darkpastel.el
 ;;
 ;; Copyright(C) 2011 Youhei SASAKI All rights reserved.
-;; $Lastupdate: 2012/04/06 23:51:17$
+;; $Lastupdate: 2012/08/19 02:29:47$
 ;;
 ;; Author: Youhei SASAKI <uwabami@gfd-dennou.org>
 ;; License: GPL-3+
@@ -25,7 +25,7 @@
 (eval-and-compile
   (require 'color-theme))
 
-;; color defenitions
+;; color def.
 (defvar pastel-black-1      "#242424")
 (defvar pastel-black        "#4f4f4f")
 (defvar pastel-black+1      "#666666")
@@ -61,6 +61,7 @@
 (defvar pastel-orange+1     "#ffbf7f")
 (defvar pastel-darkblue     "#483d8b")
 
+;; theme def.
 (defun color-theme-darkpastel ()
   "my color theme - dark background + pastel font-lock
    @see https://github.com/uwabami/color-theme-darkpastel"
