@@ -2,7 +2,7 @@
 ;;; color-theme-darkpastel.el
 ;;
 ;; Copyright(C) 2011 Youhei SASAKI All rights reserved.
-;; $Lastupdate: 2012/09/20 23:33:05$
+;; $Lastupdate: 2013/01/28 00:26:29$
 ;;
 ;; Author: Youhei SASAKI <uwabami@gfd-dennou.org>
 ;; License: GPL-3+
@@ -72,7 +72,8 @@
      (
       (background-mode . dark)
       (foreground-color . ,pastel-white)
-      (border-color .     ,pastel-black-1)
+      (background-color . ,pastel-black-1)
+      (border-color .     ,pastel-black)
       (mouse-color .      ,pastel-green+1)
       )
      ;; ;; basic coloring
