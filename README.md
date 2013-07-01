@@ -9,35 +9,30 @@ My color-theme for Emacs.
 ScreenShot
 ==========
 
-![ScreenShot](https://github.com/uwabami/color-theme-darkpastel/blob/master/color-theme-darkpastel-screenshot.png?raw=true)
+![ScreenShot](https://github.com/uwabami/color-theme-darkpastel/blob/master/darkpastel-screenshot.png?raw=true)
 
 
 Usage
 =====
 
-You need install [color-theme-library](http://www.nongnu.org/color-theme/).
-In Debian or Ubunutu, simply:
+Require:
 
-        $ sudo apt-get install emacs-goodies-el
+ * Emacs >= 24
 
-and put following code into your emacs init file
-(~/.emacs or ~/.emacs.d/init.el)
+Usage:
 
-        (setq load-path (cons "path-to-this-elisp" load-path))
-        (require 'color-theme-darkpastel)
-        (color-theme-darkpastel)
-
+        (add-to-list 'custom-theme-load-path [path to the this lisp])
+        (load-theme 'darkpastel)
 
 Copyright & License
 ===================
 
-
- * Copyright(C) 2011 Youhei SASAKI <uwabami@gfd-dennou.org>, All rights reserved.
- * License: GPL-2+
+ * Copyright(C) 2011-2013 Youhei SASAKI <uwabami@gfd-dennou.org>
+ * License: GPL-3+
 
 		This program is free software; you can redistribute it and/or modify
 		it under the terms of the GNU General Public License as published by
-		the Free Software Foundation, either version 2 of the License, or
+		the Free Software Foundation, either version 3 of the License, or
 		(at your option) any later version.
 
 		This program is distributed in the hope that it will be useful,
