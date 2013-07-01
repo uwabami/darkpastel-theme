@@ -1,0 +1,7 @@
+(:name darkpastel-theme
+       :description "darkbackground + pastel color font-lock"
+       :website "https://github.com/uwabami/darkpastel-theme"
+       :type github
+       :pkgname "uwabami/darkpastel-theme"
+       :minimum-emacs-version 24
+       :prepare (add-to-list 'custom-theme-load-path default-directory))
