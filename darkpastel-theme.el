@@ -27,6 +27,11 @@
   "dark background + pastel font-lock
    @see https://github.com/uwabami/color-theme-darkpastel")
 
+;; load 256 color palette
+(load "term/xterm")
+(unless (window-system)
+  (xterm-register-default-colors))
+
 (custom-theme-set-faces
  'darkpastel
  ;; basic coloring
