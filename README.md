@@ -9,7 +9,7 @@ My color-theme for Emacs.
 ScreenShot
 ==========
 
-![ScreenShot](https://github.com/uwabami/color-theme-darkpastel/blob/master/darkpastel-screenshot.png?raw=true)
+![ScreenShot](https://github.com/uwabami/darkpastel-theme/blob/master/darkpastel-screenshot.png?raw=true)
 
 
 Usage
@@ -23,6 +23,9 @@ Usage:
 
         (add-to-list 'custom-theme-load-path [path to the this lisp])
         (load-theme 'darkpastel)
+
+or Use [el-get recipe](https://github.com/uwabami/darkpastel-theme/blob/master/darkpastel-theme.rcp)
+
 
 Copyright & License
 ===================
@@ -42,7 +45,3 @@ Copyright & License
 
 		You should have received a copy of the GNU General Public License
 		along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-
-
-
