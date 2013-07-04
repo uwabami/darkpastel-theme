@@ -27,60 +27,195 @@
   "dark background + pastel font-lock
    @see https://github.com/uwabami/color-theme-darkpastel")
 
-;; load 256 color palette
-(eval-and-compile
-  '(progn
-     (load "term/xterm")
-     (unless (window-system)
-       (xterm-register-default-colors))))
+(let ((class '((class color) (min-colors 89)))
+      ;; color palette
+      (my:low-black   "#020202")
+      (my:black       "#242424")
+      (my:hi-black    "#4c4c4c")
+      (my:low-red     "#a54c4c")
+      (my:red         "#ff4c4c")
+      (my:hi-red      "#ff7f7f")
+      (my:pink        "#ff4cbf")
+      (my:hi-pink     "#ff7fbf")
+      (my:low-magenta "#a54cff")
+      (my:magenta     "#ff4cff")
+      (my:hi-magenta  "#ff7fff")
+      (my:low-blue    "#4c4ca5")
+      (my:blue        "#4c4cff")
+      (my:hi-blue     "#7f7fff")
+      (my:low-cyan    "#4ca5a5")
+      (my:cyan        "#4cffff")
+      (my:hi-cyan     "#7fffff")
+      (my:emerald     "#a5ffbf")
+      (my:hi-emerald  "#7fffbf")
+      (my:low-green   "#4ca54c")
+      (my:green       "#4cff4c")
+      (my:hi-green    "#7fff7f")
+      (my:low-yellow  "#a5a54c")
+      (my:yellow      "#ffff4c")
+      (my:hi-yellow   "#ffff7f")
+      (my:orange      "#ffbf4c")
+      (my:hi-orange   "#ffbf7f")
+      (my:low-white   "#888888")
+      (my:white       "#a5a5a5")
+      (my:hi-white    "#f6f3e8")
+      )
+  (custom-theme-set-faces
+   'darkpastel
+   ;; basic coloring
+       `(default
+          ((((class color) (min-colors 4096))
+            (:foreground ,my:hi-white :background ,my:black))
+           (((class color) (min-colors 256))
+            (:foreground ,my:hi-white :background ,my:black))
+           (,class
+            (:foreground ,my:hi-white :background ,my:black))))
+       `(cursor
+         ((,class
+           (:background ,my:low-cyan ))))
+       `(escape-glyph
+         ((,class
+           (:foreground ,my:low-yellow :weight bold))))
+       `(fringe
+         ((,class
+           (:background ,my:low-black ))))
+       `(highlight
+         ((,class
+           (:background ,my:hi-black :underline t ))))
+       `(region
+         ((,class
+           (:background ,my:hi-black ))))
+       `(secondary-selection
+         ((,class
+           (:background ,my:low-blue ))))
+       `(minibuffer-prompt
+         ((,class
+           (:foreground ,my:red ))))
+       `(mode-line
+         ((,class
+           (:box (:line-width -1 :style released-button)
+                 :background ,my:hi-black :foreground ,my:hi-white ))))
+       `(mode-line-inactive
+         ((,class
+           (:background ,my:hi-black :foreground ,my:black ))))
+       `(mode-line-buffer-id
+         ((,class
+           (:weight bold))))
+       `(mode-line-emphasis
+         ((,class (:weight bold))))
+       `(mode-line-highlight
+         ((,class
+           (:box (:line-width -1 :color ,my:white :style released-button)))))
+       `(button
+         ((,class
+           (:box (:line-width -1 :style released-button )
+                 :foreground ,my:hi-white ))))
+       `(link
+         ((,class
+           (:foreground ,my:hi-cyan :underline t ))))
+       `(link-visited
+         ((,class
+           (:foreground ,my:magenta :underline t ))))
+       `(header-line
+         ((,class
+           (:foreground ,my:hi-green ))))
+       `(tooltip
+         ((,class
+           (:background ,my:yellow :foreground ,my:black ))))
+       `(shadow
+         ((,class
+           (:foreground ,my:white ))))
+       `(isearch
+         ((,class
+           (:background ,my:hi-white :background ,my:low-blue ))))
+       `(isearch-fail
+         ((,class
+           (:background ,my:low-red ))))
+       `(lazy-highlight
+         ((,class
+           (:background ,my:low-green :foreground ,my:hi-white ))))
+       `(match
+         ((,class
+           (:background ,my:low-blue ))))
+       `(next-error
+         ((,class
+           (:foreground ,my:magenta ))))
+       `(query-replace
+         ((,class
+           (:background ,my:low-magenta ))))
+       `(trailing-whitespace
+         ((,class
+           (:background ,my:hi-red ))))
+       `(font-lock-builtin-face
+         ((,class
+           (:foreground ,my:blue ))))
+       `(font-lock-comment-delimiter-face
+         ((,class
+           (:foreground ,my:low-white ))))
+       `(font-lock-comment-face
+         ((,class
+           (:foreground ,my:low-white ))))
+       `(font-lock-constant-face
+         ((,class
+           (:foreground ,my:orange ))))
+       `(font-lock-doc-face
+         ((,class
+           (:foreground ,my:low-green ))))
+       `(font-lock-doc-string-face
+         ((,class
+           (:foreground ,my:low-green ))))
+       `(font-lock-function-name-face
+         ((,class
+           (:foreground ,my:low-magenta ))))
+       `(font-lock-keyword-face
+         ((,class
+           (:foreground ,my:hi-red :weight bold ))))
+       `(font-lock-negation-char-face
+         ((,class
+           (:foreground ,my:cyan ))))
+       `(font-lock-preprocessor-face
+         ((,class
+           (:foreground ,my:red ))))
+       `(font-lock-regexp-grouping-backslash
+         ((,class
+           (:foreground ,my:hi-orange ))))
+       `(font-lock-regexp-grouping-construct
+         ((,class
+           (:foreground ,my:hi-orange :underline t))))
+       `(font-lock-string-face
+         ((,class
+           (:foreground ,my:green ))))
+       `(font-lock-type-face
+         ((,class
+           (:foreground ,my:yellow :weight bold ))))
+       `(font-lock-variable-name-face
+         ((,class
+           (:foreground ,my:hi-blue ))))
+       `(font-lock-warning-face
+         ((,class
+           (:foreground ,my:hi-magenta :weight bold))))
+       `(show-paren-match-face
+         ((,class
+           (:background ,my:hi-black ))))
+       `(show-paren-mismatch-face
+         ((,class
+           (:background ,my:low-red ))))
+       )
 
-(custom-theme-set-faces
- 'darkpastel
- ;; basic coloring
- '(default ((t (:foreground "#f6f3e8" :background "#242424"))))
- '(cursor ((t (:background "#00aeae"))))
- '(fixed-pitch ((t (:family "Monospace"))))
- '(variable-pitch ((t (:family "Monospace"))))
- '(escape-glyph ((t (:foreground "#a5a54c"))))
- '(minibuffer-prompt ((t (:foreground "#4ca5ff"))))
- '(highlight ((t (:background "#7f7f4c"))))
- '(region ((t (:background "#4c4ca5"))))
- '(shadow ((t (:foreground "#a5a5a5"))))
- '(secondary-selection ((t (:background "#4c4c7f"))))
- '(trailing-whitespace ((t (:background "#ff4c4c"))))
- '(font-lock-builtin-face ((t (:foreground "#4ca5ff"))))
- '(font-lock-comment-delimiter-face ((t (:foreground "#a5a5a5"))))
- '(font-lock-comment-face ((t (:foreground "#a5a5a5"))))
- '(font-lock-constant-face ((t (:foreground "#ffa54c"))))
- '(font-lock-doc-face ((t (:foreground "#eeeeee" :underline t))))
- '(font-lock-function-name-face ((t (:foreground "#a54cff"))))
- '(font-lock-keyword-face ((t (:foreground "#ff7f7f"))))
- '(font-lock-negation-char-face ((t (:foreground "#4cffff"))))
- '(font-lock-preprocessor-face ((t (:foreground "#ff4c4c"))))
- '(font-lock-regexp-grouping-backslash ((t (:foreground "#ffa57f"))))
- '(font-lock-regexp-grouping-construct ((t (:foreground "#ffa57f" :underline t))))
- '(font-lock-string-face ((t (:foreground "#4cff4c"))))
- '(font-lock-type-face ((t (:foreground "#ffff4c"))))
- '(font-lock-variable-name-face ((t (:foreground "#7f7fff"))))
- '(font-lock-warning-face ((t (:foreground "#ff7f7f" :weight bold))))
- '(button ((t (:foreground "#7fffff" :box (:line-width 1 :color "#a5ffff" :style released-button)))))
- '(link ((t (:foreground "#7fffff" :underline t))))
- '(link-visited ((t (:underline t :foreground "#ffa5ff"))))
- '(fringe ((t (:background "#222222"))))
- '(header-line ((t (:background "#4c4c4c" :foreground "#ffff7f" :underline t))))
- '(tooltip ((t (:background "#ffff4c" :foreground "#242424"))))
- '(mode-line ((t (:box (:line-width -1 :style released-button) :foreground "#eeeeee" :background "#7f7f7f"))))
- '(mode-line-buffer-id ((t (:weight bold))))
- '(mode-line-emphasis ((t (:weight bold))))
- '(mode-line-highlight ((t (:box (:line-width 1 :color "#eeeeee" :style released-button)))))
- '(mode-line-inactive ((t (:background "#444444" :foreground "#7f7f7f" :box (:line-width -1 :color "#4c4c4c" :style released-button) :weight light))))
- '(isearch ((t (:foreground "#7f7fff"))))
- '(isearch-fail ((t (:background "#a54c4c"))))
- '(lazy-highlight ((t (:background "#ffff4c" :foreground "#242424"))))
- '(match ((t (:background "#4c4ca5"))))
- '(next-error ((t (:foreground "#ff4cff"))))
- '(query-replace ((t (:background "#a54ca5"))))
- )
+  (custom-theme-set-variables
+   'darkpastel
+   '(ansi-color-names-vector
+     ["#242424"   ; black
+      "#ff4c4c"   ; red
+      "#4cff4c"   ; green
+      "#ffff4c"   ; yellow
+      "#4c4cff"   ; blue
+      "#4cffff"   ; cyan
+      "#ff4cff"   ; magenta
+      "#f6f3e8"   ; white
+      ]))
+
+  ) ;; top (let
 
 ;;;###autoload
 (when load-file-name
@@ -88,10 +223,10 @@
                (file-name-as-directory (file-name-directory load-file-name))))
 
 (provide-theme 'darkpastel)
-
 ;; Local Variables:
 ;; coding: utf-8-unix
+;; after-save-hook: (lambda () (byte-compile-file (buffer-file-name)))
 ;; indent-tabs-mode: nil
 ;; End:
-
+;;
 ;;; darkpastel-theme.el ends here
