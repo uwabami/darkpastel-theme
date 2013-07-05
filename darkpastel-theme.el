@@ -28,37 +28,37 @@
    @see https://github.com/uwabami/color-theme-darkpastel")
 
 (let ((class '((class color) (min-colors 89)))
-      ;; color palette
       (my:low-black   "#020202")
       (my:black       "#242424")
       (my:hi-black    "#4c4c4c")
-      (my:low-red     "#a54c4c")
+      (my:low-red     "#a52424")
       (my:red         "#ff4c4c")
       (my:hi-red      "#ff7f7f")
-      (my:pink        "#ff4cbf")
-      (my:hi-pink     "#ff7fbf")
-      (my:low-magenta "#a54cff")
-      (my:magenta     "#ff4cff")
-      (my:hi-magenta  "#ff7fff")
-      (my:low-blue    "#4c4ca5")
-      (my:blue        "#4c4cff")
-      (my:hi-blue     "#7f7fff")
-      (my:low-cyan    "#4ca5a5")
-      (my:cyan        "#4cffff")
-      (my:hi-cyan     "#7fffff")
-      (my:emerald     "#a5ffbf")
-      (my:hi-emerald  "#7fffbf")
       (my:low-green   "#4ca54c")
       (my:green       "#4cff4c")
       (my:hi-green    "#7fff7f")
       (my:low-yellow  "#a5a54c")
       (my:yellow      "#ffff4c")
       (my:hi-yellow   "#ffff7f")
-      (my:orange      "#ffbf4c")
-      (my:hi-orange   "#ffbf7f")
-      (my:low-white   "#888888")
-      (my:white       "#a5a5a5")
-      (my:hi-white    "#f6f3e8")
+      (my:low-blue    "#4c4ca5")
+      (my:blue        "#4c4cff")
+      (my:hi-blue     "#7f7fff")
+      (my:low-cyan    "#4ca5a5")
+      (my:cyan        "#4cffff")
+      (my:hi-cyan     "#7fffff")
+      (my:low-magenta "#a54ca5")
+      (my:magenta     "#ff4cff")
+      (my:hi-magenta  "#ff7fff")
+      (my:low-white   "#777777")
+      (my:white       "#cccccc")
+      (my:hi-white    "#f6f3e7")
+      ;; additional colors
+      (my:pink        "#ff7fbf")
+      (my:purple      "#bf7fff")
+      (my:orange      "#ffbf7f")
+      (my:sky         "#7fbfff")
+      (my:aqua        "#7fffbf")
+      (my:lawg        "#bfff7f")
       )
   (custom-theme-set-faces
    'darkpastel
@@ -70,138 +70,52 @@
             (:foreground ,my:hi-white :background ,my:black))
            (,class
             (:foreground ,my:hi-white :background ,my:black))))
-       `(cursor
-         ((,class
-           (:background ,my:low-cyan ))))
-       `(escape-glyph
-         ((,class
-           (:foreground ,my:low-yellow :weight bold))))
-       `(fringe
-         ((,class
-           (:background ,my:low-black ))))
-       `(highlight
-         ((,class
-           (:background ,my:hi-black :underline t ))))
-       `(region
-         ((,class
-           (:background ,my:hi-black ))))
-       `(secondary-selection
-         ((,class
-           (:background ,my:low-blue ))))
-       `(minibuffer-prompt
-         ((,class
-           (:foreground ,my:red ))))
-       `(mode-line
-         ((,class
-           (:box (:line-width -1 :style released-button)
-                 :background ,my:hi-black :foreground ,my:hi-white ))))
-       `(mode-line-inactive
-         ((,class
-           (:background ,my:hi-black :foreground ,my:black ))))
-       `(mode-line-buffer-id
-         ((,class
-           (:weight bold))))
-       `(mode-line-emphasis
-         ((,class (:weight bold))))
-       `(mode-line-highlight
-         ((,class
-           (:box (:line-width -1 :color ,my:white :style released-button)))))
-       `(button
-         ((,class
-           (:box (:line-width -1 :style released-button )
-                 :foreground ,my:hi-white ))))
-       `(link
-         ((,class
-           (:foreground ,my:hi-cyan :underline t ))))
-       `(link-visited
-         ((,class
-           (:foreground ,my:magenta :underline t ))))
-       `(header-line
-         ((,class
-           (:foreground ,my:hi-green ))))
-       `(tooltip
-         ((,class
-           (:background ,my:yellow :foreground ,my:black ))))
-       `(shadow
-         ((,class
-           (:foreground ,my:white ))))
-       `(isearch
-         ((,class
-           (:background ,my:hi-white :background ,my:low-blue ))))
-       `(isearch-fail
-         ((,class
-           (:background ,my:low-red ))))
-       `(lazy-highlight
-         ((,class
-           (:background ,my:low-green :foreground ,my:hi-white ))))
-       `(match
-         ((,class
-           (:background ,my:low-blue ))))
-       `(next-error
-         ((,class
-           (:foreground ,my:magenta ))))
-       `(query-replace
-         ((,class
-           (:background ,my:low-magenta ))))
-       `(trailing-whitespace
-         ((,class
-           (:background ,my:hi-red ))))
-       `(font-lock-builtin-face
-         ((,class
-           (:foreground ,my:blue ))))
-       `(font-lock-comment-delimiter-face
-         ((,class
-           (:foreground ,my:low-white ))))
-       `(font-lock-comment-face
-         ((,class
-           (:foreground ,my:low-white ))))
-       `(font-lock-constant-face
-         ((,class
-           (:foreground ,my:orange ))))
-       `(font-lock-doc-face
-         ((,class
-           (:foreground ,my:low-green ))))
-       `(font-lock-doc-string-face
-         ((,class
-           (:foreground ,my:low-green ))))
-       `(font-lock-function-name-face
-         ((,class
-           (:foreground ,my:low-magenta ))))
-       `(font-lock-keyword-face
-         ((,class
-           (:foreground ,my:hi-red :weight bold ))))
-       `(font-lock-negation-char-face
-         ((,class
-           (:foreground ,my:cyan ))))
-       `(font-lock-preprocessor-face
-         ((,class
-           (:foreground ,my:red ))))
-       `(font-lock-regexp-grouping-backslash
-         ((,class
-           (:foreground ,my:hi-orange ))))
-       `(font-lock-regexp-grouping-construct
-         ((,class
-           (:foreground ,my:hi-orange :underline t))))
-       `(font-lock-string-face
-         ((,class
-           (:foreground ,my:green ))))
-       `(font-lock-type-face
-         ((,class
-           (:foreground ,my:yellow :weight bold ))))
-       `(font-lock-variable-name-face
-         ((,class
-           (:foreground ,my:hi-blue ))))
-       `(font-lock-warning-face
-         ((,class
-           (:foreground ,my:hi-magenta :weight bold))))
-       `(show-paren-match-face
-         ((,class
-           (:background ,my:hi-black ))))
-       `(show-paren-mismatch-face
-         ((,class
-           (:background ,my:low-red ))))
+       `(cursor                              ((,class (:background ,my:low-cyan ))))
+       `(escape-glyph                        ((,class (:foreground ,my:low-yellow :weight bold))))
+       `(fringe                              ((,class (:background ,my:low-black ))))
+       `(highlight                           ((,class (:background ,my:hi-black :underline t ))))
+       `(region                              ((,class (:background ,my:hi-black ))))
+       `(secondary-selection                 ((,class (:background ,my:low-blue ))))
+       `(minibuffer-prompt                   ((,class (:foreground ,my:red ))))
+       `(mode-line                           ((,class (:foreground ,my:hi-white :background ,my:hi-black
+                                                                   :box (:line-width -1 :style released-button)))))
+       `(mode-line-inactive                  ((,class (:foreground ,my:black :background ,my:hi-black ))))
+       `(mode-line-buffer-id                 ((,class (:weight bold))))
+       `(mode-line-emphasis                  ((,class (:weight bold))))
+       `(mode-line-highlight                 ((,class (:box (:line-width -1 :color ,my:white :style released-button)))))
+       `(button                              ((,class (:foreground ,my:hi-white
+                                                                   :box (:line-width -1 :style released-button )))))
+       `(link                                ((,class (:foreground ,my:hi-cyan :underline t ))))
+       `(link-visited                        ((,class (:foreground ,my:magenta :underline t ))))
+       `(header-line                         ((,class (:foreground ,my:green ))))
+       `(tooltip                             ((,class (:foreground ,my:black :background ,my:yellow ))))
+       `(shadow                              ((,class (:foreground ,my:white ))))
+       `(isearch                             ((,class (:foreground ,my:hi-white :background ,my:low-blue ))))
+       `(isearch-fail                        ((,class (:background ,my:low-red ))))
+       `(lazy-highlight                      ((,class (:foreground ,my:hi-white :background ,my:low-green ))))
+       `(match                               ((,class (:background ,my:low-blue ))))
+       `(next-error                          ((,class (:foreground ,my:magenta ))))
+       `(query-replace                       ((,class (:background ,my:low-magenta ))))
+       `(trailing-whitespace                 ((,class (:background ,my:hi-red ))))
+       `(font-lock-builtin-face              ((,class (:foreground ,my:hi-blue ))))
+       `(font-lock-comment-delimiter-face    ((,class (:foreground ,my:low-white ))))
+       `(font-lock-comment-face              ((,class (:foreground ,my:low-white ))))
+       `(font-lock-constant-face             ((,class (:foreground ,my:orange ))))
+       `(font-lock-doc-face                  ((,class (:foreground ,my:low-green ))))
+       `(font-lock-doc-string-face           ((,class (:foreground ,my:low-green ))))
+       `(font-lock-function-name-face        ((,class (:foreground ,my:purple ))))
+       `(font-lock-keyword-face              ((,class (:foreground ,my:hi-red ))))
+       `(font-lock-negation-char-face        ((,class (:foreground ,my:hi-cyan ))))
+       `(font-lock-preprocessor-face         ((,class (:foreground ,my:pink ))))
+       `(font-lock-regexp-grouping-backslash ((,class (:foreground ,my:aqua :bold t))))
+       `(font-lock-regexp-grouping-construct ((,class (:foreground ,my:lawg :bold t))))
+       `(font-lock-string-face               ((,class (:foreground ,my:hi-green ))))
+       `(font-lock-type-face                 ((,class (:foreground ,my:hi-yellow ))))
+       `(font-lock-variable-name-face        ((,class (:foreground ,my:sky ))))
+       `(font-lock-warning-face              ((,class (:foreground ,my:hi-magenta :weight bold))))
+       `(show-paren-match-face               ((,class (:background ,my:hi-black ))))
+       `(show-paren-mismatch-face            ((,class (:background ,my:low-red ))))
        )
-
   (custom-theme-set-variables
    'darkpastel
    '(ansi-color-names-vector
@@ -214,7 +128,6 @@
       "#ff4cff"   ; magenta
       "#f6f3e8"   ; white
       ]))
-
   ) ;; top (let
 
 ;;;###autoload
