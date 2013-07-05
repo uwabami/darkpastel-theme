@@ -57,8 +57,8 @@
       (my:purple      "#bf7fff")
       (my:orange      "#ffbf7f")
       (my:sky         "#7fbfff")
-      (my:aqua        "#7fffbf")
-      (my:lawg        "#bfff7f")
+      ;; (my:aqua        "#7fffbf")   ; not used
+      ;; (my:lawgreen    "#bfff7f")   ; not used
       )
   (custom-theme-set-faces
    'darkpastel
@@ -107,8 +107,8 @@
        `(font-lock-keyword-face              ((,class (:foreground ,my:hi-red ))))
        `(font-lock-negation-char-face        ((,class (:foreground ,my:hi-cyan ))))
        `(font-lock-preprocessor-face         ((,class (:foreground ,my:pink ))))
-       `(font-lock-regexp-grouping-backslash ((,class (:foreground ,my:aqua :bold t))))
-       `(font-lock-regexp-grouping-construct ((,class (:foreground ,my:lawg :bold t))))
+       `(font-lock-regexp-grouping-backslash ((,class (:foreground ,my:red :bold t))))
+       `(font-lock-regexp-grouping-construct ((,class (:foreground ,my:purple :bold t))))
        `(font-lock-string-face               ((,class (:foreground ,my:hi-green ))))
        `(font-lock-type-face                 ((,class (:foreground ,my:hi-yellow ))))
        `(font-lock-variable-name-face        ((,class (:foreground ,my:sky ))))
