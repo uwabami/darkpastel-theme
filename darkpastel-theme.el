@@ -115,6 +115,17 @@
        `(font-lock-warning-face              ((,class (:foreground ,my:hi-magenta :weight bold))))
        `(show-paren-match-face               ((,class (:background ,my:hi-black ))))
        `(show-paren-mismatch-face            ((,class (:background ,my:low-red ))))
+       ;; org-mode
+       `(org-level-1 ((,class (:bold t :foreground ,my:hi-yellow))))
+       `(org-level-2 ((,class (:bold t :foreground ,my:hi-green))))
+       `(org-level-3 ((,class (:bold t :foreground ,my:hi-red))))
+       `(org-level-4 ((,class (:bold t :foreground ,my:hi-blue))))
+       `(org-level-5 ((,class (:bold t :foreground ,my:hi-magenta))))
+       `(org-level-6 ((,class (:bold t :foreground ,my:purple))))
+       `(org-level-7 ((,class (:bold t :foreground ,my:orange))))
+       `(org-level-8 ((,class (:bold t :foreground ,my:hi-black))))
+       ;; hoem-mode
+       `(howm-mode-title-face ((,class (:bold t :foreground ,my:hi-yellow))))
        )
   (custom-theme-set-variables
    'darkpastel
