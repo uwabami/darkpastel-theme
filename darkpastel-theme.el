@@ -57,8 +57,6 @@
       (my:purple      "#bf7fff")
       (my:orange      "#ffbf7f")
       (my:sky         "#7fbfff")
-      ;; (my:aqua        "#7fffbf")   ; not used
-      ;; (my:lawgreen    "#bfff7f")   ; not used
       )
   (custom-theme-set-faces
    'darkpastel
@@ -115,6 +113,67 @@
        `(font-lock-warning-face              ((,class (:foreground ,my:hi-magenta :weight bold))))
        `(show-paren-match-face               ((,class (:background ,my:hi-black ))))
        `(show-paren-mismatch-face            ((,class (:background ,my:low-red ))))
+
+       ;; Wanderlust
+       ;;; header
+       `(wl-highlight-message-subject-header-contents     ((,class (:foreground ,my:red :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-message-from-header-contents        ((,class (:foreground ,my:yellow :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-message-date-header-contents        ((,class (:foreground ,my:green :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-message-important-header-contents   ((,class (:foreground ,my:magenta :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-message-important-header-contents2  ((,class (:foreground ,my:orange :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-message-unimportant-header-contents ((,class (:foreground ,my:white :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-message-headers                     ((,class (:foreground ,my:cyan :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-message-header-contents             ((,class (:foreground ,my:white :bold nil :italic nil :weight normal ))))
+       ;;; citation
+       `(wl-highlight-message-citation-header             ((,class (:foreground ,my:hi-green :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-message-cited-text-1                ((,class (:foreground ,my:hi-green :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-message-cited-text-2                ((,class (:foreground ,my:hi-yellow :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-message-cited-text-3                ((,class (:foreground ,my:hi-blue  :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-message-cited-text-4                ((,class (:foreground ,my:cyan :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-message-cited-text-5                ((,class (:foreground ,my:hi-magenta :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-message-cited-text-6                ((,class (:foreground ,my:purple :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-message-cited-text-7                ((,class (:foreground ,my:orange :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-message-cited-text-8                ((,class (:foreground ,my:hi-red :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-message-cited-text-9                ((,class (:foreground ,my:white :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-message-cited-text-10               ((,class (:foreground ,my:low-white :bold nil :italic nil :weight normal ))))
+       ;;; signature
+       `(wl-highlight-message-signature                   ((,class (:foreground ,my:low-white :bold nil :italic nil :weight normal ))))
+       ;;; summary mode
+       `(wl-highlight-summary-high-read-face              ((,class (:foreground ,my:hi-green :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-summary-high-unread-face            ((,class (:foreground ,my:orange :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-summary-low-read-face               ((,class (:foreground ,my:green :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-summary-low-unread-face             ((,class (:foreground ,my:sky :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-summary-normal-face                 ((,class (:foreground ,my:hi-white :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-summary-killed-face                 ((,class (:foreground ,my:low-white :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-summary-new-face                    ((,class (:foreground ,my:red :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-summary-unread-face                 ((,class (:foreground ,my:red :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-summary-important-face              ((,class (:foreground ,my:cyan :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-summary-important-flag-face         ((,class (:foreground ,my:yellow :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-summary-flagged-face                ((,class (:foreground ,my:hi-yellow :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-summary-displaying-face             ((,class (:underline t :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-summary-forwarded-face              ((,class (:foreground ,my:yellow :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-summary-answered-face               ((,class (:foreground ,my:low-cyan :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-summary-copied-face                 ((,class (:foreground ,my:cyan :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-summary-temp-face                   ((,class (:foreground ,my:pink :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-summary-resend-face                 ((,class (:foreground ,my:orange :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-summary-deleted-face                ((,class (:foreground ,my:hi-black :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-summary-prefetch-face               ((,class (:foreground ,my:blue :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-summary-refiled-face                ((,class (:foreground ,my:green :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-summary-target-face                 ((,class (:foreground ,my:cyan :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-summary-disposed-face               ((,class (:foreground ,my:white :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-summary-thread-top-face             ((,class (:foreground ,my:hi-white :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-thread-indent-face                  ((,class (:underline t :bold nil :italic nil :weight normal ))))
+       ;;; folder
+       `(wl-highlight-folder-zero-face                    ((,class (:foreground ,my:hi-white :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-folder-opened-face                  ((,class (:foreground ,my:cyan :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-folder-unread-face                  ((,class (:foreground ,my:blue :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-folder-unknown-face                 ((,class (:foreground ,my:cyan :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-folder-few-face                     ((,class (:foreground ,my:red :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-folder-many-face                    ((,class (:foreground ,my:pink :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-folder-closed-face                  ((,class (:foreground ,my:green :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-folder-killed-face                  ((,class (:foreground ,my:hi-black :bold nil :italic nil :weight normal ))))
+       `(wl-highlight-folder-path-face                    ((,class (:underline t :bold nil :italic nil :weight normal ))))
+
        ;; org-mode
        `(org-level-1 ((,class (:bold t :foreground ,my:hi-yellow))))
        `(org-level-2 ((,class (:bold t :foreground ,my:hi-green))))
