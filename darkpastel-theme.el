@@ -111,8 +111,8 @@
        `(font-lock-type-face                 ((,class (:foreground ,my:hi-yellow ))))
        `(font-lock-variable-name-face        ((,class (:foreground ,my:sky ))))
        `(font-lock-warning-face              ((,class (:foreground ,my:hi-magenta :weight bold))))
-       `(show-paren-match-face               ((,class (:background ,my:hi-black ))))
-       `(show-paren-mismatch-face            ((,class (:background ,my:low-red ))))
+       `(show-paren-match-face               ((,class (:foreground nil :background nil :underline  ,my:hi-yellow  :weight bold))))
+       `(show-paren-mismatch-face            ((,class (:foreground nil :background nil :underline  ,my:hi-red :weight bold))))
 
        ;; Wanderlust
        ;;; header
