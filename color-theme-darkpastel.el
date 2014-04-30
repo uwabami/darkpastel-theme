@@ -3,7 +3,7 @@
 ;;;
 ;;
 ;; Copyright(C) 2011 Youhei SASAKI All rights reserved.
-;; $Lastupdate: 2014-04-30 23:40:25$
+;; $Lastupdate: 2014-04-30 23:46:53$
 ;;
 ;; Author: Youhei SASAKI <uwabami@gfd-dennou.org>
 ;; Version: 0.1
@@ -23,46 +23,50 @@
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ;;
 ;;; Code:
-
 (eval-and-compile
   (require 'color-theme))
 
-;; color def.
-(defvar my:low-black   "#020202")
-(defvar my:black       "#242424")
-(defvar my:hi-black    "#4c4c4c")
-(defvar my:low-red     "#a52424")
-(defvar my:red         "#ff4c4c")
-(defvar my:hi-red      "#ff7f7f")
-(defvar my:low-green   "#4ca54c")
-(defvar my:green       "#4cff4c")
-(defvar my:hi-green    "#7fff7f")
-(defvar my:low-yellow  "#a5a54c")
-(defvar my:yellow      "#ffff4c")
-(defvar my:hi-yellow   "#ffff7f")
-(defvar my:low-blue    "#4c4ca5")
-(defvar my:blue        "#4c4cff")
-(defvar my:hi-blue     "#7f7fff")
-(defvar my:low-cyan    "#4ca5a5")
-(defvar my:cyan        "#4cffff")
-(defvar my:hi-cyan     "#7fffff")
-(defvar my:low-magenta "#a54ca5")
-(defvar my:magenta     "#ff4cff")
-(defvar my:hi-magenta  "#ff7fff")
-(defvar my:low-white   "#777777")
-(defvar my:white       "#cccccc")
-(defvar my:hi-white    "#f6f3e7")
-;; additional colors
-(defvar my:pink        "#ff7fbf")
-(defvar my:purple      "#bf7fff")
-(defvar my:orange      "#ffbf7f")
-(defvar my:sky         "#7fbfff")
+;;;###autoload
+(defun darkpastel-pallet ()
+  (progn
+    ;; color def.
+    (defvar my:low-black   "#020202")
+    (defvar my:black       "#242424")
+    (defvar my:hi-black    "#4c4c4c")
+    (defvar my:low-red     "#a52424")
+    (defvar my:red         "#ff4c4c")
+    (defvar my:hi-red      "#ff7f7f")
+    (defvar my:low-green   "#4ca54c")
+    (defvar my:green       "#4cff4c")
+    (defvar my:hi-green    "#7fff7f")
+    (defvar my:low-yellow  "#a5a54c")
+    (defvar my:yellow      "#ffff4c")
+    (defvar my:hi-yellow   "#ffff7f")
+    (defvar my:low-blue    "#4c4ca5")
+    (defvar my:blue        "#4c4cff")
+    (defvar my:hi-blue     "#7f7fff")
+    (defvar my:low-cyan    "#4ca5a5")
+    (defvar my:cyan        "#4cffff")
+    (defvar my:hi-cyan     "#7fffff")
+    (defvar my:low-magenta "#a54ca5")
+    (defvar my:magenta     "#ff4cff")
+    (defvar my:hi-magenta  "#ff7fff")
+    (defvar my:low-white   "#777777")
+    (defvar my:white       "#cccccc")
+    (defvar my:hi-white    "#f6f3e7")
+    ;; additional colors
+    (defvar my:pink        "#ff7fbf")
+    (defvar my:purple      "#bf7fff")
+    (defvar my:orange      "#ffbf7f")
+    (defvar my:sky         "#7fbfff")
+    ))
 
 ;;;###autoload
 (defun color-theme-darkpastel ()
   "my color theme - dark background + pastel font-lock
    @see https://github.com/uwabami/color-theme-darkpastel"
   (interactive)
+  (darkpastel-pallet)
   (color-theme-install
    `(color-theme-darkpastel
      ;; color-theme mapping
@@ -181,6 +185,7 @@
      (howm-mode-title-face ((t (:bold t :foreground ,my:hi-yellow))))
      )))
 
+;;;###autoload
 (add-to-list 'color-themes
              `(color-theme-darkpastel
                "Dark background + pastel color"
