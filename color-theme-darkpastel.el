@@ -3,7 +3,7 @@
 ;;;
 ;;
 ;; Copyright(C) 2011 Youhei SASAKI All rights reserved.
-;; $Lastupdate: 2014-04-30 23:46:53$
+;; $Lastupdate: 2014-05-01 00:05:56$
 ;;
 ;; Author: Youhei SASAKI <uwabami@gfd-dennou.org>
 ;; Version: 0.1
@@ -148,13 +148,6 @@
      ;; howm-mode
      (howm-mode-title-face ((t (:bold t :foreground "#ffff7f"))))
      )))
-
-;;;###autoload
-(add-to-list 'color-themes
-             `(color-theme-darkpastel
-               "Dark background + pastel color"
-  "my color theme - dark background + pastel font-lock
-   @see https://github.com/uwabami/color-theme-darkpastel"))
 
 (provide 'color-theme-darkpastel)
 ;;; color-theme-darkpastel.el ends here
