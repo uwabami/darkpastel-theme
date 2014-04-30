@@ -183,7 +183,7 @@
        `(org-level-6 ((,class (:bold t :foreground ,my:purple))))
        `(org-level-7 ((,class (:bold t :foreground ,my:orange))))
        `(org-level-8 ((,class (:bold t :foreground ,my:hi-black))))
-       ;; hoem-mode
+       ;; howm-mode
        `(howm-mode-title-face ((,class (:bold t :foreground ,my:hi-yellow))))
        )
   (custom-theme-set-variables
