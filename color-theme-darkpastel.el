@@ -184,4 +184,4 @@
 ;;;###autoload
 
 (provide 'color-theme-darkpastel)
-;;; template.el ends here
+;;; color-theme-darkpastel.el ends here
