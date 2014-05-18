@@ -1,21 +1,14 @@
 # -*- mode: makefile -*-
-UNAME	:= $(shell uname)
-ifeq ($(UNAME), Darwin)
-	EMACS	:= /Applications/MacPorts/Emacs.app/Contents/MacOS/Emacs
-else
-	EMACS	:= /usr/bin/emacs
-endif
-__ALLSRC__	:= $(wildcard *.el)
-ELFILES		:= $(__ALLSRC__:%v.el=)
-ELCFILES	:= $(ELFILES:%.el=%.elc)
+__SRC__		:= $(wildcard *.el)
+ELFiles		:= $(__SRC__:%v.el=)
+ELCFiles	:= $(ELFiles:%.el=%.elc)
 
-all: $(ELCFILES)
+EMACS	?= emacs
+
+all: $(ELCFiles)
 
 %.elc: %.el
-	@$(EMACS) -q -no-site-file --batch \
-		-f batch-byte-compile $(CURDIR)/$<
+	$(EMACS) -q -batch -f batch-byte-compile $<
 
 clean:
-	rm -f $(ELCFILES)
-
-distclean: clean
+	rm -fr $(ELCFiles)
