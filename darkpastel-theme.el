@@ -7,7 +7,7 @@
 ;; URL: https://github.com/uwabami/color-theme-darkpastel
 ;; Version: 0.2
 ;; License: GPL-3+
-;; $Lastupdate: 2014-05-28 02:06:11$
+;; $Lastupdate: 2014-05-28 02:14:26$
 ;;
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -28,9 +28,23 @@
   "dark background + pastel font-lock
    @see https://github.com/uwabami/color-theme-darkpastel")
 
-(defun in:terminal ()
-  "Retrun true if in emacs with `-nw'"
-  (not (display-graphic-p)))
+(custom-theme-set-variables
+ 'darkpastel
+ '(frame-background-mode 'dark)
+ '(show-paren-mode t)
+ '(show-paren-delay 0)
+ '(show-paren-style 'expression)
+ ;; '(ansi-color-names-vector
+ ;;   ["#242424"   ; black
+ ;;    "#ee4c4c"   ; red
+ ;;    "#4cee4c"   ; green
+ ;;    "#eeee4c"   ; yellow
+ ;;    "#4c4cee"   ; blue
+ ;;    "#4ceeee"   ; cyan
+ ;;    "#ee4cee"   ; magenta
+ ;;    "#f6f3e8"   ; white
+ ;;    ])
+ )
 
 (let ((my:l:black      "#020202")
       (my:n:black      "#242424")
@@ -289,14 +303,14 @@
    `(wl-highlight-message-cited-text-7                ((t (:foreground ,my:n:green :bold nil :italic nil ))))
    `(wl-highlight-message-cited-text-8                ((t (:foreground ,my:n:yellow :bold nil :italic nil ))))
    `(wl-highlight-message-cited-text-9                ((t (:foreground ,my:n:blue :bold nil :italic nil ))))
-   `(wl-highlight-message-date-header-contents        ((t (:foreground ,my:h:green :bold t :italic nil ))))
-   `(wl-highlight-message-from-header-contents        ((t (:foreground ,my:h:yellow :bold t :italic nil ))))
+   `(wl-highlight-message-date-header-contents        ((t (:foreground ,my:n:green :bold t :italic nil ))))
+   `(wl-highlight-message-from-header-contents        ((t (:foreground ,my:n:yellow :bold t :italic nil ))))
    `(wl-highlight-message-header-contents             ((t (:foreground ,my:n:white :bold nil :italic nil ))))
-   `(wl-highlight-message-headers                     ((t (:foreground ,my:h:cyan :bold t :italic nil ))))
-   `(wl-highlight-message-important-header-contents   ((t (:foreground ,my:h:magenta :bold nil :italic nil ))))
+   `(wl-highlight-message-headers                     ((t (:foreground ,my:n:cyan :bold t :italic nil ))))
+   `(wl-highlight-message-important-header-contents   ((t (:foreground ,my:n:magenta :bold t :italic nil ))))
    `(wl-highlight-message-important-header-contents2  ((t (:foreground ,my:n:red :bold nil :italic nil ))))
    `(wl-highlight-message-signature                   ((t (:foreground ,my:l:white :bold nil :italic nil ))))
-   `(wl-highlight-message-subject-header-contents     ((t (:foreground ,my:h:red :bold t :italic nil ))))
+   `(wl-highlight-message-subject-header-contents     ((t (:foreground ,my:n:red :bold t :italic nil ))))
    `(wl-highlight-message-unimportant-header-contents ((t (:foreground ,my:n:white :bold nil :italic nil ))))
    `(wl-highlight-summary-answered-face               ((t (:foreground ,my:n:cyan :bold nil :italic nil :weight normal ))))
    `(wl-highlight-summary-copied-face                 ((t (:foreground ,my:n:cyan :bold nil :italic nil :weight normal ))))
@@ -415,23 +429,6 @@
    )
   )
 
-(custom-theme-set-variables
- 'darkpastel
- '(frame-background-mode 'dark)
- '(show-paren-mode t)
- '(show-paren-delay 0)
- '(show-paren-style 'expression)
- ;; '(ansi-color-names-vector
- ;;   ["#242424"   ; black
- ;;    "#ee4c4c"   ; red
- ;;    "#4cee4c"   ; green
- ;;    "#eeee4c"   ; yellow
- ;;    "#4c4cee"   ; blue
- ;;    "#4ceeee"   ; cyan
- ;;    "#ee4cee"   ; magenta
- ;;    "#f6f3e8"   ; white
- ;;    ])
- )
 ;; transparent background
 (if (display-graphic-p)
     (progn
