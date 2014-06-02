@@ -7,7 +7,7 @@
 ;; URL: https://github.com/uwabami/color-theme-darkpastel
 ;; Version: 0.2
 ;; License: GPL-3+
-;; $Lastupdate: 2014-05-28 02:14:26$
+;; $Lastupdate: 2014-06-03 01:05:05$
 ;;
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -34,6 +34,7 @@
  '(show-paren-mode t)
  '(show-paren-delay 0)
  '(show-paren-style 'expression)
+ '(global-hl-line-mode t)
  ;; '(ansi-color-names-vector
  ;;   ["#242424"   ; black
  ;;    "#ee4c4c"   ; red
@@ -49,26 +50,32 @@
 (let ((my:l:black      "#020202")
       (my:n:black      "#242424")
       (my:h:black      "#4c4c4c")
+      (my:l:red        "#3c0202")
       (my:n:red        "#ff4c4c")
       (my:h:red        "#ff7f7f")
       (my:n:violet     "#ff4ca5")
       (my:h:violet     "#ff7fbf")
+      (my:l:magenta    "#3c023c")
       (my:n:magenta    "#ff7fff")
       (my:h:magenta    "#ffbfff")
       (my:n:purple     "#bf4cff")
       (my:h:purple     "#bf7fff")
+      (my:l:blue       "#02023c")
       (my:n:blue       "#4c4cff")
       (my:h:blue       "#7f7fff")
       (my:n:lightblue  "#4ca5ff")
       (my:h:lightblue  "#7fbfff")
+      (my:l:cyan       "#023c3c")
       (my:n:cyan       "#4cffff")
       (my:h:cyan       "#7fffff")
       (my:n:emerald    "#4cffa5")
       (my:h:emerald    "#7fffbf")
+      (my:l:green      "#023c02")
       (my:n:green      "#4cff4c")
       (my:h:green      "#7fff7f")
       (my:n:lightgreen "#bfff4c")
       (my:h:lightgreen "#bfff7f")
+      (my:l:yellow     "#3c3c02")
       (my:n:yellow     "#ffff4c")
       (my:h:yellow     "#ffff7f")
       (my:n:orange     "#ffa54c")
@@ -110,11 +117,11 @@
    `(fringe                              ((t (:background ,my:l:black ))))
    ;; ffap
    ;; file-name-shadow
-   ;; fixed-pitch
+   `(fixed-pitch                         ((t (:inherit default :height 1.0 ))))
    ;; glyphless-char
    `(header-line                         ((t (:foreground ,my:n:green ))))
    ;; help-argument-name
-   `(highlight                           ((t (:background ,my:h:black :underline t ))))
+   `(highlight                           ((t (:background ,my:h:black :underline nil ))))
    `(isearch                             ((t (:foreground ,my:h:white :background ,my:n:blue :underline t ))))
    `(isearch-fail                        ((t (:background ,my:n:red ))))
    ;; italic
@@ -124,7 +131,7 @@
    ;; menu
    `(match                               ((t (:foreground nil :background nil :underline ,my:n:blue :weight bold))))
    `(minibuffer-prompt                   ((t (:foreground ,my:n:red  ))))
-   `(mode-line                           ((t (:foreground ,my:h:white :bold t :background ,my:l:white :box (:line-width -1 :style released-button)))))
+   `(mode-line                           ((t (:foreground ,my:n:cyan :bold t :background ,my:l:white :box (:line-width -1 :style released-button)))))
    `(mode-line-buffer-id                 ((t (:bold t))))
    `(mode-line-emphasis                  ((t (:bold t))))
    `(mode-line-highlight                 ((t (:box (:line-width -1 :color ,my:n:white :style released-button) :bold t))))
@@ -132,8 +139,8 @@
    `(next-error                          ((t (:foreground ,my:n:magenta ))))
    `(nobreak-space                       ((t (:inherit default :underline ,my:h:yellow ))))
    `(query-replace                       ((t (:background ,my:n:magenta ))))
-   `(region                              ((t (:background ,my:h:black ))))
-   `(secondary-selection                 ((t (:background ,my:n:blue ))))
+   `(region                              ((t (:background ,my:l:yellow ))))
+   `(secondary-selection                 ((t (:background ,my:l:cyan ))))
    `(shadow                              ((t (:foreground ,my:n:white ))))
    ;; scroll-bar
    ;; success
@@ -144,6 +151,7 @@
    `(variable-pitch                      ((t (:inherit default :height 1.0 ))))
    ;; vertical-border
    `(warning                             ((t (:background nil :foreground ,my:h:red :underline t))))
+   `(hl-line                             ((t (:inherit highlight :background ,my:n:black ))))
 
    ;; ----------------------------------------------------------------------
    ;; howm
@@ -184,8 +192,8 @@
    ;; ----------------------------------------------------------------------
    ;; show-paren-match
    ;; ----------------------------------------------------------------------
-   `(show-paren-match-face    ((t (:background ,my:h:black :foreground nil :underline ,my:n:yellow :bold t))))
-   `(show-paren-mismatch-face ((t (:background ,my:h:red :foreground nil :underline ,my:n:red :bold t))))
+   `(show-paren-match-face    ((t (:background ,my:l:blue :foreground nil :underline nil :bold t ))))
+   `(show-paren-mismatch-face ((t (:background ,my:l:red :foreground nil :underline ,my:n:red :bold t))))
 
    ;; ----------------------------------------------------------------------
    ;; outline
@@ -220,7 +228,7 @@
    ;; org-agenda-structure
    ;; org-archived
    ;; org-beamer-tag
-   `(org-block ((t (:inherit default :background ,my:h:black))))
+   `(org-block ((t (:inherit default :background ,my:l:green ))))
    ;; org-block-background
    ;; org-block-begin-line
    ;; org-block-end-line
@@ -426,6 +434,16 @@
    ;; yaicomplete
    ;; ----------------------------------------------------------------------
    `(yaicomplete-completion-suffix-face ((t (:foreground ,my:h:black ))))
+
+   ;; ----------------------------------------------------------------------
+   ;; tabbar
+   ;; ----------------------------------------------------------------------
+   `(tabbar-default ((t (:background ,my:l:white :foreground ,my:h:white :height 1.0 ))))
+;;   `(tabbar-button ((t (:inherit tabbar-default :box nil ))))
+;;   `(tabbar-button-highlight ((t (:inherit tabbar-button ))))
+   `(tabbar-selected ((t (:inherit tabbar-default :foreground ,my:n:cyan :bold t :box nil ))))
+   `(tabbar-separator ((t (:inherit tabbar-default :background ,my:l:black ))))
+   `(tabbar-unselected ((t (:inherit tabbar-default :forground ,my:h:white :bold nil :box nil ))))
    )
   )
 
