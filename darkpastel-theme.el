@@ -7,7 +7,7 @@
 ;; URL: https://github.com/uwabami/darkpastel-theme
 ;; Version: 0.3
 ;; License: GPL-3+
-;; $Lastupdate: 2014-06-09 15:34:59$
+;; $Lastupdate: 2014-06-09 19:23:21$
 ;;
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -438,12 +438,12 @@
    ;; ----------------------------------------------------------------------
    ;; tabbar
    ;; ----------------------------------------------------------------------
-   `(tabbar-default ((t (:background ,my:l:white :foreground ,my:h:white :height 1.0 ))))
+;;   `(tabbar-default ((t (:background ,my:l:white :foreground ,my:h:white :height 1.0 ))))
 ;;   `(tabbar-button ((t (:inherit tabbar-default :box nil ))))
 ;;   `(tabbar-button-highlight ((t (:inherit tabbar-button ))))
-   `(tabbar-selected ((t (:inherit tabbar-default :foreground ,my:n:cyan :bold t :box nil ))))
-   `(tabbar-separator ((t (:inherit tabbar-default :background ,my:l:blue ))))
-   `(tabbar-unselected ((t (:inherit tabbar-default :forground ,my:h:white :bold nil :box nil ))))
+   ;; `(tabbar-selected ((t (:inherit tabbar-default :foreground ,my:n:cyan :bold t :box nil ))))
+   ;; `(tabbar-separator ((t (:inherit tabbar-default :background ,my:l:blue ))))
+   ;; `(tabbar-unselected ((t (:inherit tabbar-default :forground ,my:h:white :bold nil :box nil ))))
    )
   )
 
