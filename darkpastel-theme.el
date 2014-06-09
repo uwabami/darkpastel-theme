@@ -1,13 +1,13 @@
-;;;; darkpastel-theme.el --- dark background and pastel
+;;; darkpastel-theme.el --- dark background and pastel
 ;;
 ;; Copyright(C) 2011-2014 Youhei SASAKI All rights reserved.
 ;;
 ;; Author: Youhei SASAKI <uwabami@gfd-dennou.org>
 ;;         Syohei YOSHIDA <syohex@gmail.com>
-;; URL: https://github.com/uwabami/color-theme-darkpastel
-;; Version: 0.2
+;; URL: https://github.com/uwabami/darkpastel-theme
+;; Version: 0.3
 ;; License: GPL-3+
-;; $Lastupdate: 2014-06-03 01:05:05$
+;; $Lastupdate: 2014-06-09 15:34:59$
 ;;
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -442,7 +442,7 @@
 ;;   `(tabbar-button ((t (:inherit tabbar-default :box nil ))))
 ;;   `(tabbar-button-highlight ((t (:inherit tabbar-button ))))
    `(tabbar-selected ((t (:inherit tabbar-default :foreground ,my:n:cyan :bold t :box nil ))))
-   `(tabbar-separator ((t (:inherit tabbar-default :background ,my:l:black ))))
+   `(tabbar-separator ((t (:inherit tabbar-default :background ,my:l:blue ))))
    `(tabbar-unselected ((t (:inherit tabbar-default :forground ,my:h:white :bold nil :box nil ))))
    )
   )
