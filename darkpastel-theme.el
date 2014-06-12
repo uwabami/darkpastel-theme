@@ -5,7 +5,8 @@
 ;; Author: Youhei SASAKI <uwabami@gfd-dennou.org>
 ;;         Syohei YOSHIDA <syohex@gmail.com>
 ;; URL: https://github.com/uwabami/darkpastel-theme
-;; Version: 0.3
+;; Version: 20140612.1709
+;; X-Original-Version: 0.3
 ;; License: GPL-3+
 ;; $Lastupdate: 2014-06-12 17:08:52$
 ;;
@@ -156,10 +157,10 @@
    ;; ----------------------------------------------------------------------
    ;; elscreen
    ;; ----------------------------------------------------------------------
-   `(elscreen-tab-background-face ((t (:background ,my:h:black ))))
-   `(elscreen-tab-control-face    ((t (:inherit elscreen-tab-background-face :foreground ,my:h:cyan  ))))
-   `(elscreen-tab-current-screen-face ((t (:inherit elscreen-tab-background-face :foreground ,my:h:red ))))
-   `(elscreen-tab-other-screen-face ((t  (:inherit elscreen-tab-background-face :foreground ,my:l:white  ))))
+   `(elscreen-tab-background-face ((t (:background ,my:h:black :foreground ,my:l:white ))))
+   `(elscreen-tab-control-face    ((t (:background ,my:h:black :foreground ,my:h:blue ))))
+   `(elscreen-tab-current-screen-face ((t (:background ,my:h:black :foreground ,my:h:red :bold t))))
+   `(elscreen-tab-other-screen-face ((t  (:background ,my:h:black :foreground ,my:l:white ))))
 
    ;; ----------------------------------------------------------------------
    ;; howm
@@ -449,7 +450,7 @@
    `(tabbar-default ((t (:background ,my:h:black :foreground ,my:l:white :height 1.0 ))))
    `(tabbar-button ((t (:inherit tabbar-default :box nil ))))
    ;; `(tabbar-button-highlight ((t (:inherit tabbar-button ))))
-   `(tabbar-selected ((t (:inherit tabbar-default :foreground ,my:n:cyan :bold t :box nil ))))
+   `(tabbar-selected ((t (:inherit tabbar-default :foreground ,my:h:red :bold t :box nil ))))
    `(tabbar-modified ((t (:inherit tabbar-default :foreground ,my:h:green :bold t :box nil ))))
    ;; `(tabbar-separator ((t (:inherit tabbar-default :background ,my:l:blue ))))
    ;; `(tabbar-unselected ((t (:inherit tabbar-default :forground ,my:h:white :bold nil :box nil ))))
