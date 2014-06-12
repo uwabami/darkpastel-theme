@@ -30,7 +30,7 @@ or Use [el-get recipe](https://github.com/uwabami/darkpastel-theme/blob/master/d
 Copyright & License
 ===================
 
- * Copyright(C) 2011-2013 Youhei SASAKI <uwabami@gfd-dennou.org>
+ * Copyright(C) 2011-2014 Youhei SASAKI <uwabami@gfd-dennou.org>
  * License: GPL-3+
 
 		This program is free software; you can redistribute it and/or modify
