@@ -7,7 +7,7 @@
 ;; URL: https://github.com/uwabami/darkpastel-theme
 ;; Version: 0.3
 ;; License: GPL-3+
-;; $Lastupdate: 2014-06-10 04:07:24$
+;; $Lastupdate: 2014-06-12 17:08:52$
 ;;
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -131,10 +131,10 @@
    ;; menu
    `(match                               ((t (:foreground nil :background nil :underline ,my:n:blue :weight bold))))
    `(minibuffer-prompt                   ((t (:foreground ,my:n:red  ))))
-   `(mode-line                           ((t (:foreground ,my:n:cyan :bold t :background ,my:l:white :box (:line-width -1 :style released-button)))))
+   `(mode-line                           ((t (:foreground ,my:n:cyan :bold t :background ,my:h:black :box (:line-width -1 :style released-button)))))
    `(mode-line-buffer-id                 ((t (:bold t))))
    `(mode-line-emphasis                  ((t (:bold t))))
-   `(mode-line-highlight                 ((t (:box (:line-width -1 :color ,my:n:white :style released-button) :bold t))))
+   `(mode-line-highlight                 ((t (:box (:line-width -1 :color ,my:l:white :style released-button) :bold t))))
    `(mode-line-inactive                  ((t (:foreground ,my:l:white :background ,my:h:black ))))
    `(next-error                          ((t (:foreground ,my:n:magenta ))))
    `(nobreak-space                       ((t (:inherit default :underline ,my:h:yellow ))))
@@ -152,6 +152,14 @@
    ;; vertical-border
    `(warning                             ((t (:background nil :foreground ,my:h:red :underline t))))
    `(hl-line                             ((t (:inherit highlight :background ,my:n:black ))))
+
+   ;; ----------------------------------------------------------------------
+   ;; elscreen
+   ;; ----------------------------------------------------------------------
+   `(elscreen-tab-background-face ((t (:background ,my:h:black ))))
+   `(elscreen-tab-control-face    ((t (:inherit elscreen-tab-background-face :foreground ,my:h:cyan  ))))
+   `(elscreen-tab-current-screen-face ((t (:inherit elscreen-tab-background-face :foreground ,my:h:red ))))
+   `(elscreen-tab-other-screen-face ((t  (:inherit elscreen-tab-background-face :foreground ,my:l:white  ))))
 
    ;; ----------------------------------------------------------------------
    ;; howm
