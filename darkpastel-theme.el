@@ -122,7 +122,7 @@
    ;; glyphless-char
    `(header-line                         ((t (:foreground ,my:n:green ))))
    ;; help-argument-name
-   `(highlight                           ((t (:background ,my:h:black :underline nil ))))
+   `(highlight                           ((t (:background nil :underline t ))))
    `(isearch                             ((t (:foreground ,my:h:white :background ,my:n:blue :underline t ))))
    `(isearch-fail                        ((t (:background ,my:n:red ))))
    ;; italic
@@ -152,15 +152,15 @@
    `(variable-pitch                      ((t (:inherit default :height 1.0 ))))
    ;; vertical-border
    `(warning                             ((t (:background nil :foreground ,my:h:red :underline t))))
-   `(hl-line                             ((t (:inherit highlight :background ,my:n:black ))))
+   `(hl-line                             ((t (:inherit highlight :underline t ))))
 
    ;; ----------------------------------------------------------------------
    ;; elscreen
    ;; ----------------------------------------------------------------------
-   `(elscreen-tab-background-face ((t (:background ,my:h:black :foreground ,my:l:white ))))
+   `(elscreen-tab-background-face ((t (:background ,my:h:black :foreground ,my:n:white ))))
    `(elscreen-tab-control-face    ((t (:background ,my:h:black :foreground ,my:h:blue ))))
    `(elscreen-tab-current-screen-face ((t (:background ,my:h:black :foreground ,my:h:red :bold t))))
-   `(elscreen-tab-other-screen-face ((t  (:background ,my:h:black :foreground ,my:l:white ))))
+   `(elscreen-tab-other-screen-face ((t  (:background ,my:h:black :foreground ,my:n:white ))))
 
    ;; ----------------------------------------------------------------------
    ;; howm
@@ -201,8 +201,8 @@
    ;; ----------------------------------------------------------------------
    ;; show-paren-match
    ;; ----------------------------------------------------------------------
-   `(show-paren-match-face    ((t (:background ,my:l:blue :foreground nil :underline nil :bold t ))))
-   `(show-paren-mismatch-face ((t (:background ,my:l:red :foreground nil :underline ,my:n:red :bold t))))
+   `(show-paren-match-face    ((t (:background ,my:l:blue :foreground nil :bold t ))))
+   `(show-paren-mismatch-face ((t (:background ,my:n:red :foreground nil :bold t))))
 
    ;; ----------------------------------------------------------------------
    ;; outline
@@ -237,7 +237,7 @@
    ;; org-agenda-structure
    ;; org-archived
    ;; org-beamer-tag
-   `(org-block ((t (:inherit default :background ,my:l:green ))))
+   `(org-block ((t (:inherit default :background ,my:h:black ))))
    ;; org-block-background
    ;; org-block-begin-line
    ;; org-block-end-line
@@ -262,15 +262,15 @@
    ;; org-headline-done
    ;; org-hide
    ;; org-latex-and-related
-   `(org-level-1  ((t (:inherint outline-1 ))))
-   `(org-level-2  ((t (:inherint outline-2 ))))
-   `(org-level-3  ((t (:inherint outline-3 ))))
-   `(org-level-4  ((t (:inherint outline-4 ))))
-   `(org-level-5  ((t (:inherint outline-5 ))))
-   `(org-level-6  ((t (:inherint outline-6 ))))
-   `(org-level-7  ((t (:inherint outline-7 ))))
-   `(org-level-8  ((t (:inherint outline-8 ))))
-   `(org-link ((t (:foreground ,my:h:cyan ))))
+   `(org-level-1  ((t (:inherit outline-1 ))))
+   `(org-level-2  ((t (:inherit outline-2 ))))
+   `(org-level-3  ((t (:inherit outline-3 ))))
+   `(org-level-4  ((t (:inherit outline-4 ))))
+   `(org-level-5  ((t (:inherit outline-5 ))))
+   `(org-level-6  ((t (:inherit outline-6 ))))
+   `(org-level-7  ((t (:inherit outline-7 ))))
+   `(org-level-8  ((t (:inherit outline-8 ))))
+   `(org-link     ((t (:inherit link ))))
    ;; org-list-dt
    ;; org-macro
    ;; org-meta-line
@@ -307,6 +307,7 @@
    `(wl-highlight-folder-unknown-face                 ((t (:foreground ,my:n:cyan :bold nil :italic nil :weight normal ))))
    `(wl-highlight-folder-unread-face                  ((t (:foreground ,my:n:blue :bold nil :italic nil :weight normal ))))
    `(wl-highlight-folder-zero-face                    ((t (:foreground ,my:h:white :bold nil :italic nil :weight normal ))))
+   ;; `(wl-highlight-header-separator-face               ((t (:inherit highlight :bold t ))))
    `(wl-highlight-message-citation-header             ((t (:foreground ,my:h:green :bold nil :italic nil ))))
    `(wl-highlight-message-cited-text-1                ((t (:foreground ,my:h:green :bold nil :italic nil ))))
    `(wl-highlight-message-cited-text-10               ((t (:foreground ,my:n:cyan :bold nil :italic nil ))))
