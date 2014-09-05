@@ -5,10 +5,9 @@
 ;; Author: Youhei SASAKI <uwabami@gfd-dennou.org>
 ;;         Syohei YOSHIDA <syohex@gmail.com>
 ;; URL: https://github.com/uwabami/darkpastel-theme
-;; Version: 20140612.1709
-;; X-Original-Version: 0.3
+;; Version: 0.4
 ;; License: GPL-3+
-;; $Lastupdate: 2014-06-12 17:08:52$
+;; $Lastupdate: 2014-09-05 23:25:07$
 ;;
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -448,22 +447,29 @@
    ;; ----------------------------------------------------------------------
    ;; tabbar
    ;; ----------------------------------------------------------------------
-   `(tabbar-default ((t (:background ,my:h:black :foreground ,my:l:white :height 1.0 ))))
-   `(tabbar-button ((t (:inherit tabbar-default :box nil ))))
+   ;; `(tabbar-default ((t (:background ,my:h:black :foreground ,my:l:white :height 1.0 ))))
+   ;; `(tabbar-button ((t (:inherit tabbar-default :box nil ))))
    ;; `(tabbar-button-highlight ((t (:inherit tabbar-button ))))
-   `(tabbar-selected ((t (:inherit tabbar-default :foreground ,my:h:red :bold t :box nil ))))
-   `(tabbar-modified ((t (:inherit tabbar-default :foreground ,my:h:green :bold t :box nil ))))
+   ;; `(tabbar-selected ((t (:inherit tabbar-default :foreground ,my:h:red :bold t :box nil ))))
+   ;; `(tabbar-modified ((t (:inherit tabbar-default :foreground ,my:h:green :bold t :box nil ))))
    ;; `(tabbar-separator ((t (:inherit tabbar-default :background ,my:l:blue ))))
    ;; `(tabbar-unselected ((t (:inherit tabbar-default :forground ,my:h:white :bold nil :box nil ))))
    )
   )
 
 ;; transparent background
-(if (display-graphic-p)
+(cond
+  ((unless window-system)
     (progn
       (set-frame-parameter (selected-frame) 'alpha '(95 70))
       (add-to-list 'default-frame-alist '(alpha 95 70))
       (set-background-color "#242424")))
+ (t
+  (progn
+    (load "term/xterm")
+    (xterm-register-default-colors)
+    (tty-set-up-initial-frame-faces))
+  ))
 
 ;;;###autoload
 (when (boundp 'custom-theme-load-path)

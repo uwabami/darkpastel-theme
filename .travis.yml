@@ -4,7 +4,7 @@ cache:
   - http: false
 env:
   - EMACS=emacs24
-  - Emacs=emacs-snapshot
+  - EMACS=emacs-snapshot
 before_install:
   - ln -s $TRAVIS_BUILD_DIR $HOME/.emacs.d
   - sudo add-apt-repository -y ppa:cassou/emacs
