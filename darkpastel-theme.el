@@ -7,7 +7,7 @@
 ;; URL: https://github.com/uwabami/darkpastel-theme
 ;; Version: 0.4
 ;; License: GPL-3+
-;; $Lastupdate: 2014-09-05 23:25:07$
+;; $Lastupdate: 2014-11-10 07:02:16$
 ;;
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -31,57 +31,50 @@
 (custom-theme-set-variables
  'darkpastel
  '(frame-background-mode 'dark)
- '(show-paren-mode t)
- '(show-paren-delay 0)
- '(show-paren-style 'expression)
- '(global-hl-line-mode t)
- ;; '(ansi-color-names-vector
- ;;   ["#242424"   ; black
- ;;    "#ee4c4c"   ; red
- ;;    "#4cee4c"   ; green
- ;;    "#eeee4c"   ; yellow
- ;;    "#4c4cee"   ; blue
- ;;    "#4ceeee"   ; cyan
- ;;    "#ee4cee"   ; magenta
- ;;    "#f6f3e8"   ; white
- ;;    ])
+ ;; '(show-paren-mode t)
+ ;; '(show-paren-delay 0)
+ ;; '(show-paren-style 'expression)
+ ;; '(global-hl-line-mode t)
+ '(ansi-color-names-vector
+   ["#242424"   ; black
+    "#ee4c4c"   ; red
+    "#4cee4c"   ; green
+    "#eeee4c"   ; yellow
+    "#4c4cee"   ; blue
+    "#4ceeee"   ; cyan
+    "#ee4cee"   ; magenta
+    "#f6f3e8"   ; white
+    ])
  )
 
-(let ((my:l:black      "#020202")
+(let (
       (my:n:black      "#242424")
       (my:h:black      "#4c4c4c")
-      (my:l:red        "#3c0202")
-      (my:n:red        "#ff4c4c")
+      (my:n:red        "#ee4c4c")
       (my:h:red        "#ff7f7f")
-      (my:n:violet     "#ff4ca5")
-      (my:h:violet     "#ff7fbf")
-      (my:l:magenta    "#3c023c")
-      (my:n:magenta    "#ff7fff")
-      (my:h:magenta    "#ffbfff")
-      (my:n:purple     "#bf4cff")
+      (my:n:magenta    "#ee4ca5")
+      (my:h:magenta    "#ff7fbf")
+      (my:n:violet     "#ee4cee")
+      (my:h:violet     "#ff7fff")
+      (my:n:purple     "#a54cee")
       (my:h:purple     "#bf7fff")
-      (my:l:blue       "#02023c")
-      (my:n:blue       "#4c4cff")
+      (my:n:blue       "#4c4cee")
       (my:h:blue       "#7f7fff")
-      (my:n:lightblue  "#4ca5ff")
-      (my:h:lightblue  "#7fbfff")
-      (my:l:cyan       "#023c3c")
-      (my:n:cyan       "#4cffff")
+      (my:n:lightb     "#4ca5ee")
+      (my:h:lightb     "#7fbfff")
+      (my:n:cyan       "#4ceeee")
       (my:h:cyan       "#7fffff")
-      (my:n:emerald    "#4cffa5")
+      (my:n:emerald    "#4ceea5")
       (my:h:emerald    "#7fffbf")
-      (my:l:green      "#023c02")
-      (my:n:green      "#4cff4c")
+      (my:n:green      "#4cee4c")
       (my:h:green      "#7fff7f")
-      (my:n:lightgreen "#bfff4c")
-      (my:h:lightgreen "#bfff7f")
-      (my:l:yellow     "#3c3c02")
-      (my:n:yellow     "#ffff4c")
+      (my:n:lawngr     "#a5ee4c")
+      (my:h:lawngr     "#bfff7f")
+      (my:n:yellow     "#eeee4c")
       (my:h:yellow     "#ffff7f")
-      (my:n:orange     "#ffa54c")
-      (my:h:orange     "#ffbf7f")
-      (my:l:white      "#777777")
-      (my:n:white      "#cccccc")
+      (my:n:orange     "#ffbf7f")
+      (my:h:orange     "#ffb347")
+      (my:n:white      "#aaaaaa")
       (my:h:white      "#f6f3e7"))
   ;; create theme
   (custom-theme-set-faces
@@ -89,86 +82,85 @@
    ;; ----------------------------------------------------------------------
    ;; Basic settings
    ;; ----------------------------------------------------------------------
-   `(default                             ((t (:foreground ,my:h:white ))))
-   `(font-lock-builtin-face              ((t (:foreground ,my:h:blue ))))
-   `(font-lock-comment-delimiter-face    ((t (:foreground ,my:l:white ))))
-   `(font-lock-comment-face              ((t (:foreground ,my:l:white ))))
-   `(font-lock-constant-face             ((t (:foreground ,my:h:orange ))))
-   `(font-lock-doc-face                  ((t (:foreground ,my:h:emerald ))))
-   `(font-lock-doc-string-face           ((t (:foreground ,my:h:emerald ))))
-   `(font-lock-function-name-face        ((t (:foreground ,my:h:purple ))))
-   `(font-lock-keyword-face              ((t (:foreground ,my:h:red ))))
-   `(font-lock-link-face                 ((t (:foreground ,my:h:cyan :bold t ))))
-   `(font-lock-negation-char-face        ((t (:foreground ,my:n:cyan ))))
-   `(font-lock-preprocessor-face         ((t (:foreground ,my:n:red ))))
-   `(font-lock-reference-face            ((t (:foreground ,my:h:violet ))))
-   `(font-lock-regexp-grouping-backslash ((t (:foreground ,my:h:lightgreen  :bold t ))))
-   `(font-lock-regexp-grouping-construct ((t (:foreground ,my:h:blue :bold t ))))
-   `(font-lock-string-face               ((t (:foreground ,my:h:green ))))
-   `(font-lock-type-face                 ((t (:foreground ,my:h:yellow ))))
-   `(font-lock-variable-name-face        ((t (:foreground ,my:h:lightblue ))))
-   `(font-lock-warning-face              ((t (:foreground ,my:h:magenta :bold t ))))
+   `(default                             ((t (:foreground ,my:h:white   :bold nil :italic nil))))
+   `(font-lock-builtin-face              ((t (:foreground ,my:n:blue    :bold nil :italic nil))))
+   `(font-lock-comment-delimiter-face    ((t (:foreground ,my:n:white   :bold t   :italic nil))))
+   `(font-lock-comment-face              ((t (:foreground ,my:n:white   :bold nil :italic nil))))
+   `(font-lock-constant-face             ((t (:foreground ,my:h:orange  :bold nil :italic nil))))
+   `(font-lock-doc-face                  ((t (:foreground ,my:n:emerald :bold nil :italic nil))))
+   `(font-lock-doc-string-face           ((t (:foreground ,my:n:emerald :bold t   :italic nil))))
+   `(font-lock-function-name-face        ((t (:foreground ,my:h:purple  :bold t   :italic nil))))
+   `(font-lock-keyword-face              ((t (:foreground ,my:h:red     :bold nil :italic nil))))
+   `(font-lock-link-face                 ((t (:foreground ,my:n:cyan    :bold t   :italic nil))))
+   `(font-lock-negation-char-face        ((t (:foreground ,my:h:cyan    :bold t   :italic nil))))
+   `(font-lock-preprocessor-face         ((t (:foreground ,my:n:red     :bold nil :italic nil))))
+   `(font-lock-regexp-grouping-backslash ((t (:foreground ,my:n:lawngr  :bold nil :italic nil))))
+   `(font-lock-regexp-grouping-construct ((t (:foreground ,my:h:blue    :bold t   :italic nil))))
+   `(font-lock-string-face               ((t (:foreground ,my:h:green   :bold nil :italic nil))))
+   `(font-lock-type-face                 ((t (:foreground ,my:h:yellow  :bold nil :italic nil))))
+   `(font-lock-variable-name-face        ((t (:foreground ,my:n:lightb  :bold nil :italic nil))))
+   `(font-lock-warning-face              ((t (:foreground ,my:h:violet  :bold t   :italic nil))))
    ;; border
    ;; buffer-menu-buffer
    ;; button
-   `(cursor                              ((t (:background ,my:n:cyan ))))
-   `(error                               ((t (:background nil :foreground ,my:n:violet :underline t ))))
-   `(escape-glyph                        ((t (:foreground ,my:n:yellow :weight bold))))
-   `(fringe                              ((t (:background ,my:l:black ))))
+   ;; `(cursor                              ((t (:background ,my:n:cyan ))))
+   ;; `(error                               ((t (:background nil :foreground ,my:n:violet :underline t ))))
+   ;; `(escape-glyph                        ((t (:foreground ,my:n:yellow :weight bold))))
+   ;; `(fringe                              ((t (:background ,my:l:black ))))
    ;; ffap
    ;; file-name-shadow
-   `(fixed-pitch                         ((t (:inherit default :height 1.0 ))))
+   ;; `(fixed-pitch                         ((t (:inherit default :height 1.0 ))))
    ;; glyphless-char
-   `(header-line                         ((t (:foreground ,my:n:green ))))
+   ;; `(header-line                         ((t (:foreground ,my:n:green ))))
    ;; help-argument-name
-   `(highlight                           ((t (:background nil :underline t ))))
-   `(isearch                             ((t (:foreground ,my:h:white :background ,my:n:blue :underline t ))))
-   `(isearch-fail                        ((t (:background ,my:n:red ))))
+   ;; `(highlight                           ((t (:background nil :underline t ))))
+   ;; `(isearch                             ((t (:foreground ,my:h:white :background ,my:n:blue :underline t ))))
+   ;; `(isearch-fail                        ((t (:background ,my:n:red ))))
    ;; italic
-   `(lazy-highlight                      ((t (:foreground ,my:h:white :background ,my:n:lightblue ))))
-   `(link                                ((t (:foreground ,my:h:cyan :underline t ))))
-   `(link-visited                        ((t (:foreground ,my:n:magenta :underline t ))))
+   ;; `(lazy-highlight                      ((t (:foreground ,my:h:white :background ,my:n:lightblue ))))
+   ;; `(link                                ((t (:foreground ,my:h:cyan :underline t ))))
+   ;; `(link-visited                        ((t (:foreground ,my:n:magenta :underline t ))))
    ;; menu
-   `(match                               ((t (:foreground nil :background nil :underline ,my:n:blue :weight bold))))
-   `(minibuffer-prompt                   ((t (:foreground ,my:n:red  ))))
-   `(mode-line                           ((t (:foreground ,my:n:cyan :bold t :background ,my:h:black :box (:line-width -1 :style released-button)))))
-   `(mode-line-buffer-id                 ((t (:bold t))))
-   `(mode-line-emphasis                  ((t (:bold t))))
-   `(mode-line-highlight                 ((t (:box (:line-width -1 :color ,my:l:white :style released-button) :bold t))))
-   `(mode-line-inactive                  ((t (:foreground ,my:l:white :background ,my:h:black ))))
-   `(next-error                          ((t (:foreground ,my:n:magenta ))))
-   `(nobreak-space                       ((t (:inherit default :underline ,my:h:yellow ))))
-   `(query-replace                       ((t (:background ,my:n:magenta ))))
-   `(region                              ((t (:background ,my:l:yellow ))))
-   `(secondary-selection                 ((t (:background ,my:l:cyan ))))
-   `(shadow                              ((t (:foreground ,my:n:white ))))
+   ;; `(match                               ((t (:foreground nil :background nil :underline ,my:n:blue :weight bold))))
+   ;; `(minibuffer-prompt                   ((t (:foreground ,my:n:red  ))))
+   ;; `(mode-line                           ((t (:foreground ,my:n:cyan :bold t :background ,my:h:black :box (:line-width -1 :style released-button)))))
+   ;; `(mode-line-buffer-id                 ((t (:bold t))))
+   ;; `(mode-line-emphasis                  ((t (:bold t))))
+   ;; `(mode-line-highlight                 ((t (:box (:line-width -1 :color ,my:l:white :style released-button) :bold t))))
+   ;; `(mode-line-inactive                  ((t (:foreground ,my:l:white :background ,my:h:black ))))
+   ;; `(next-error                          ((t (:foreground ,my:n:magenta ))))
+   ;; `(nobreak-space                       ((t (:inherit default :underline ,my:h:yellow ))))
+   ;; `(query-replace                       ((t (:background ,my:n:magenta ))))
+   ;; `(region                              ((t (:background ,my:l:yellow ))))
+   ;; `(secondary-selection                 ((t (:background ,my:l:cyan ))))
+   ;; `(shadow                              ((t (:foreground ,my:n:white ))))
    ;; scroll-bar
    ;; success
-   `(tooltip                             ((t (:foreground ,my:n:black :background ,my:n:yellow ))))
-   `(trailing-whitespace                 ((t (:background ,my:h:red ))))
+   ;; `(tooltip                             ((t (:foreground ,my:n:black :background ,my:n:yellow ))))
+   ;; `(trailing-whitespace                 ((t (:background ,my:h:red ))))
    ;; tool-bar
    ;; underline
-   `(variable-pitch                      ((t (:inherit default :height 1.0 ))))
+   ;; `(variable-pitch                      ((t (:inherit default :height 1.0 ))))
    ;; vertical-border
-   `(warning                             ((t (:background nil :foreground ,my:h:red :underline t))))
-   `(hl-line                             ((t (:inherit highlight :underline t ))))
+   ;; `(warning                             ((t (:background nil :foreground ,my:h:red :underline t))))
+   ;; `(hl-line                             ((t (:inherit highlight :underline t ))))
 
    ;; ----------------------------------------------------------------------
    ;; elscreen
    ;; ----------------------------------------------------------------------
-   `(elscreen-tab-background-face ((t (:background ,my:h:black :foreground ,my:n:white ))))
-   `(elscreen-tab-control-face    ((t (:background ,my:h:black :foreground ,my:h:blue ))))
-   `(elscreen-tab-current-screen-face ((t (:background ,my:h:black :foreground ,my:h:red :bold t))))
-   `(elscreen-tab-other-screen-face ((t  (:background ,my:h:black :foreground ,my:n:white ))))
+   ;; `(elscreen-tab-background-face ((t (:background ,my:h:black :foreground ,my:n:white ))))
+   ;; `(elscreen-tab-control-face    ((t (:background ,my:h:black :foreground ,my:h:blue ))))
+   ;; `(elscreen-tab-current-screen-face ((t (:background ,my:h:black :foreground ,my:h:red :bold t))))
+   ;; `(elscreen-tab-other-screen-face ((t  (:background ,my:h:black :foreground ,my:n:white ))))
 
    ;; ----------------------------------------------------------------------
    ;; howm
    ;; ----------------------------------------------------------------------
-   `(howm-menu-key-face ((t (:foreground ,my:n:orange ))))
+   ;; `(howm-menu-key-face ((t (:foreground ,my:n:orange ))))
    ;; `(howm-menu-list-face
-   `(howm-mode-keyword-face ((t (:foreground ,my:h:blue ))))
-   `(howm-mode-ref-face ((t (:foreground ,my:h:cyan ))))
-   `(howm-mode-title-face ((t (:bold t :foreground ,my:h:yellow :underline t))))
+   ;; `(howm-mode-keyword-face ((t (:foreground ,my:h:blue ))))
+   ;; `(howm-mode-ref-face ((t (:foreground ,my:h:cyan ))))
+   ;; `(howm-mode-title-face ((t (:bold t :foreground ,my:h:yellow :underline t))))
    ;; howm-mode-wiki-face
    ;; howm-reminder-deadline-face
    ;; howm-reminder-defer-face
@@ -200,20 +192,20 @@
    ;; ----------------------------------------------------------------------
    ;; show-paren-match
    ;; ----------------------------------------------------------------------
-   `(show-paren-match-face    ((t (:background ,my:l:blue :foreground nil :bold t ))))
-   `(show-paren-mismatch-face ((t (:background ,my:n:red :foreground nil :bold t))))
+   ;; `(show-paren-match-face    ((t (:background ,my:l:blue :foreground nil :bold t ))))
+   ;; `(show-paren-mismatch-face ((t (:background ,my:n:red :foreground nil :bold t))))
 
    ;; ----------------------------------------------------------------------
    ;; outline
    ;; ----------------------------------------------------------------------
-   `(outline-1  ((t (:bold t :foreground ,my:h:yellow  ))))
-   `(outline-2  ((t (:bold t :foreground ,my:h:red     ))))
-   `(outline-3  ((t (:bold t :foreground ,my:h:emerald ))))
-   `(outline-4  ((t (:bold t :foreground ,my:h:magenta ))))
-   `(outline-5  ((t (:bold t :foreground ,my:h:purple  ))))
-   `(outline-6  ((t (:bold t :foreground ,my:h:cyan    ))))
-   `(outline-7  ((t (:bold t :foreground ,my:h:orange  ))))
-   `(outline-8  ((t (:bold t :foreground ,my:h:black   ))))
+   ;; `(outline-1  ((t (:bold t :foreground ,my:h:yellow  ))))
+   ;; `(outline-2  ((t (:bold t :foreground ,my:h:red     ))))
+   ;; `(outline-3  ((t (:bold t :foreground ,my:h:emerald ))))
+   ;; `(outline-4  ((t (:bold t :foreground ,my:h:magenta ))))
+   ;; `(outline-5  ((t (:bold t :foreground ,my:h:purple  ))))
+   ;; `(outline-6  ((t (:bold t :foreground ,my:h:cyan    ))))
+   ;; `(outline-7  ((t (:bold t :foreground ,my:h:orange  ))))
+   ;; `(outline-8  ((t (:bold t :foreground ,my:h:black   ))))
 
    ;; ----------------------------------------------------------------------
    ;; org-mode
@@ -236,7 +228,7 @@
    ;; org-agenda-structure
    ;; org-archived
    ;; org-beamer-tag
-   `(org-block ((t (:inherit default :background ,my:h:black ))))
+   ;; `(org-block ((t (:inherit default :background ,my:h:black ))))
    ;; org-block-background
    ;; org-block-begin-line
    ;; org-block-end-line
@@ -261,15 +253,15 @@
    ;; org-headline-done
    ;; org-hide
    ;; org-latex-and-related
-   `(org-level-1  ((t (:inherit outline-1 ))))
-   `(org-level-2  ((t (:inherit outline-2 ))))
-   `(org-level-3  ((t (:inherit outline-3 ))))
-   `(org-level-4  ((t (:inherit outline-4 ))))
-   `(org-level-5  ((t (:inherit outline-5 ))))
-   `(org-level-6  ((t (:inherit outline-6 ))))
-   `(org-level-7  ((t (:inherit outline-7 ))))
-   `(org-level-8  ((t (:inherit outline-8 ))))
-   `(org-link     ((t (:inherit link ))))
+   ;; `(org-level-1  ((t (:inherit outline-1 ))))
+   ;; `(org-level-2  ((t (:inherit outline-2 ))))
+   ;; `(org-level-3  ((t (:inherit outline-3 ))))
+   ;; `(org-level-4  ((t (:inherit outline-4 ))))
+   ;; `(org-level-5  ((t (:inherit outline-5 ))))
+   ;; `(org-level-6  ((t (:inherit outline-6 ))))
+   ;; `(org-level-7  ((t (:inherit outline-7 ))))
+   ;; `(org-level-8  ((t (:inherit outline-8 ))))
+   ;; `(org-link     ((t (:inherit link ))))
    ;; org-list-dt
    ;; org-macro
    ;; org-meta-line
@@ -297,62 +289,62 @@
    ;; ----------------------------------------------------------------------
    ;; Wanderlust
    ;; ----------------------------------------------------------------------
-   `(wl-highlight-folder-closed-face                  ((t (:foreground ,my:n:green :bold nil :italic nil :weight normal ))))
-   `(wl-highlight-folder-few-face                     ((t (:foreground ,my:n:red :bold nil :italic nil :weight normal ))))
-   `(wl-highlight-folder-killed-face                  ((t (:foreground ,my:h:black :bold nil :italic nil :weight normal ))))
-   `(wl-highlight-folder-many-face                    ((t (:foreground ,my:h:magenta :bold nil :italic nil :weight normal ))))
-   `(wl-highlight-folder-opened-face                  ((t (:foreground ,my:n:cyan :bold nil :italic nil :weight normal ))))
-   `(wl-highlight-folder-path-face                    ((t (:underline t :bold nil :italic nil :weight normal ))))
-   `(wl-highlight-folder-unknown-face                 ((t (:foreground ,my:n:cyan :bold nil :italic nil :weight normal ))))
-   `(wl-highlight-folder-unread-face                  ((t (:foreground ,my:n:blue :bold nil :italic nil :weight normal ))))
-   `(wl-highlight-folder-zero-face                    ((t (:foreground ,my:h:white :bold nil :italic nil :weight normal ))))
+   ;; `(wl-highlight-folder-closed-face                  ((t (:foreground ,my:n:green :bold nil :italic nil :weight normal ))))
+   ;; `(wl-highlight-folder-few-face                     ((t (:foreground ,my:n:red :bold nil :italic nil :weight normal ))))
+   ;; `(wl-highlight-folder-killed-face                  ((t (:foreground ,my:h:black :bold nil :italic nil :weight normal ))))
+   ;; `(wl-highlight-folder-many-face                    ((t (:foreground ,my:h:magenta :bold nil :italic nil :weight normal ))))
+   ;; `(wl-highlight-folder-opened-face                  ((t (:foreground ,my:n:cyan :bold nil :italic nil :weight normal ))))
+   ;; `(wl-highlight-folder-path-face                    ((t (:underline t :bold nil :italic nil :weight normal ))))
+   ;; `(wl-highlight-folder-unknown-face                 ((t (:foreground ,my:n:cyan :bold nil :italic nil :weight normal ))))
+   ;; `(wl-highlight-folder-unread-face                  ((t (:foreground ,my:n:blue :bold nil :italic nil :weight normal ))))
+   ;; `(wl-highlight-folder-zero-face                    ((t (:foreground ,my:h:white :bold nil :italic nil :weight normal ))))
    ;; `(wl-highlight-header-separator-face               ((t (:inherit highlight :bold t ))))
-   `(wl-highlight-message-citation-header             ((t (:foreground ,my:h:green :bold nil :italic nil ))))
-   `(wl-highlight-message-cited-text-1                ((t (:foreground ,my:h:green :bold nil :italic nil ))))
-   `(wl-highlight-message-cited-text-10               ((t (:foreground ,my:n:cyan :bold nil :italic nil ))))
-   `(wl-highlight-message-cited-text-11               ((t (:foreground ,my:n:magenta :bold nil :italic nil ))))
-   `(wl-highlight-message-cited-text-12               ((t (:foreground ,my:n:red :bold nil :italic nil ))))
-   `(wl-highlight-message-cited-text-2                ((t (:foreground ,my:h:yellow :bold nil :italic nil ))))
-   `(wl-highlight-message-cited-text-3                ((t (:foreground ,my:h:blue  :bold nil :italic nil ))))
-   `(wl-highlight-message-cited-text-4                ((t (:foreground ,my:h:cyan :bold nil :italic nil ))))
-   `(wl-highlight-message-cited-text-5                ((t (:foreground ,my:h:magenta :bold nil :italic nil ))))
-   `(wl-highlight-message-cited-text-6                ((t (:foreground ,my:h:red :bold nil :italic nil ))))
-   `(wl-highlight-message-cited-text-7                ((t (:foreground ,my:n:green :bold nil :italic nil ))))
-   `(wl-highlight-message-cited-text-8                ((t (:foreground ,my:n:yellow :bold nil :italic nil ))))
-   `(wl-highlight-message-cited-text-9                ((t (:foreground ,my:n:blue :bold nil :italic nil ))))
-   `(wl-highlight-message-date-header-contents        ((t (:foreground ,my:n:green :bold t :italic nil ))))
-   `(wl-highlight-message-from-header-contents        ((t (:foreground ,my:n:yellow :bold t :italic nil ))))
-   `(wl-highlight-message-header-contents             ((t (:foreground ,my:n:white :bold nil :italic nil ))))
-   `(wl-highlight-message-headers                     ((t (:foreground ,my:n:cyan :bold t :italic nil ))))
-   `(wl-highlight-message-important-header-contents   ((t (:foreground ,my:n:magenta :bold t :italic nil ))))
-   `(wl-highlight-message-important-header-contents2  ((t (:foreground ,my:n:red :bold nil :italic nil ))))
-   `(wl-highlight-message-signature                   ((t (:foreground ,my:l:white :bold nil :italic nil ))))
-   `(wl-highlight-message-subject-header-contents     ((t (:foreground ,my:n:red :bold t :italic nil ))))
-   `(wl-highlight-message-unimportant-header-contents ((t (:foreground ,my:n:white :bold nil :italic nil ))))
-   `(wl-highlight-summary-answered-face               ((t (:foreground ,my:n:cyan :bold nil :italic nil :weight normal ))))
-   `(wl-highlight-summary-copied-face                 ((t (:foreground ,my:n:cyan :bold nil :italic nil :weight normal ))))
-   `(wl-highlight-summary-deleted-face                ((t (:foreground ,my:l:white :bold nil :italic nil :weight normal ))))
-   `(wl-highlight-summary-displaying-face             ((t (:underline t :bold nil :italic nil :weight normal ))))
-   `(wl-highlight-summary-disposed-face               ((t (:foreground ,my:n:white :bold nil :italic nil :weight normal ))))
-   `(wl-highlight-summary-flagged-face                ((t (:foreground ,my:h:yellow :bold nil :italic nil :weight normal ))))
-   `(wl-highlight-summary-forwarded-face              ((t (:foreground ,my:h:blue :bold nil :italic nil :weight normal ))))
-   `(wl-highlight-summary-high-read-face              ((t (:foreground ,my:h:green :bold nil :italic nil :weight normal ))))
-   `(wl-highlight-summary-high-unread-face            ((t (:foreground ,my:h:orange :bold nil :italic nil :weight normal ))))
-   `(wl-highlight-summary-important-face              ((t (:foreground ,my:n:cyan :bold nil :italic nil :weight normal ))))
-   `(wl-highlight-summary-important-flag-face         ((t (:foreground ,my:n:yellow :bold nil :italic nil :weight normal ))))
-   `(wl-highlight-summary-killed-face                 ((t (:foreground ,my:l:white :bold nil :italic nil :weight normal ))))
-   `(wl-highlight-summary-l:read-face                 ((t (:foreground ,my:n:green :bold nil :italic nil :weight normal ))))
-   `(wl-highlight-summary-l:unread-face               ((t (:foreground ,my:h:lightblue :bold nil :italic nil :weight normal ))))
-   `(wl-highlight-summary-new-face                    ((t (:foreground ,my:n:red :bold nil :italic nil :weight normal ))))
-   `(wl-highlight-summary-normal-face                 ((t (:foreground ,my:h:white :bold nil :italic nil :weight normal ))))
-   `(wl-highlight-summary-prefetch-face               ((t (:foreground ,my:n:blue :bold nil :italic nil :weight normal ))))
-   `(wl-highlight-summary-refiled-face                ((t (:foreground ,my:n:green :bold nil :italic nil :weight normal ))))
-   `(wl-highlight-summary-resend-face                 ((t (:foreground ,my:h:orange :bold nil :italic nil :weight normal ))))
-   `(wl-highlight-summary-target-face                 ((t (:foreground ,my:n:cyan :bold nil :italic nil :weight normal ))))
-   `(wl-highlight-summary-temp-face                   ((t (:foreground ,my:n:violet :bold nil :italic nil :weight normal ))))
-   `(wl-highlight-summary-thread-top-face             ((t (:foreground ,my:h:white :bold nil :italic nil :weight normal ))))
-   `(wl-highlight-summary-unread-face                 ((t (:foreground ,my:n:red :bold nil :italic nil :weight normal ))))
-   `(wl-highlight-thread-indent-face                  ((t (:underline t :bold nil :italic nil :weight normal ))))
+   ;; `(wl-highlight-message-citation-header             ((t (:foreground ,my:h:green :bold nil :italic nil ))))
+   ;; `(wl-highlight-message-cited-text-1                ((t (:foreground ,my:h:green :bold nil :italic nil ))))
+   ;; `(wl-highlight-message-cited-text-10               ((t (:foreground ,my:n:cyan :bold nil :italic nil ))))
+   ;; `(wl-highlight-message-cited-text-11               ((t (:foreground ,my:n:magenta :bold nil :italic nil ))))
+   ;; `(wl-highlight-message-cited-text-12               ((t (:foreground ,my:n:red :bold nil :italic nil ))))
+   ;; `(wl-highlight-message-cited-text-2                ((t (:foreground ,my:h:yellow :bold nil :italic nil ))))
+   ;; `(wl-highlight-message-cited-text-3                ((t (:foreground ,my:h:blue  :bold nil :italic nil ))))
+   ;; `(wl-highlight-message-cited-text-4                ((t (:foreground ,my:h:cyan :bold nil :italic nil ))))
+   ;; `(wl-highlight-message-cited-text-5                ((t (:foreground ,my:h:magenta :bold nil :italic nil ))))
+   ;; `(wl-highlight-message-cited-text-6                ((t (:foreground ,my:h:red :bold nil :italic nil ))))
+   ;; `(wl-highlight-message-cited-text-7                ((t (:foreground ,my:n:green :bold nil :italic nil ))))
+   ;; `(wl-highlight-message-cited-text-8                ((t (:foreground ,my:n:yellow :bold nil :italic nil ))))
+   ;; `(wl-highlight-message-cited-text-9                ((t (:foreground ,my:n:blue :bold nil :italic nil ))))
+   ;; `(wl-highlight-message-date-header-contents        ((t (:foreground ,my:n:green :bold t :italic nil ))))
+   ;; `(wl-highlight-message-from-header-contents        ((t (:foreground ,my:n:yellow :bold t :italic nil ))))
+   ;; `(wl-highlight-message-header-contents             ((t (:foreground ,my:n:white :bold nil :italic nil ))))
+   ;; `(wl-highlight-message-headers                     ((t (:foreground ,my:n:cyan :bold t :italic nil ))))
+   ;; `(wl-highlight-message-important-header-contents   ((t (:foreground ,my:n:magenta :bold t :italic nil ))))
+   ;; `(wl-highlight-message-important-header-contents2  ((t (:foreground ,my:n:red :bold nil :italic nil ))))
+   ;; `(wl-highlight-message-signature                   ((t (:foreground ,my:l:white :bold nil :italic nil ))))
+   ;; `(wl-highlight-message-subject-header-contents     ((t (:foreground ,my:n:red :bold t :italic nil ))))
+   ;; `(wl-highlight-message-unimportant-header-contents ((t (:foreground ,my:n:white :bold nil :italic nil ))))
+   ;; `(wl-highlight-summary-answered-face               ((t (:foreground ,my:n:cyan :bold nil :italic nil :weight normal ))))
+   ;; `(wl-highlight-summary-copied-face                 ((t (:foreground ,my:n:cyan :bold nil :italic nil :weight normal ))))
+   ;; `(wl-highlight-summary-deleted-face                ((t (:foreground ,my:l:white :bold nil :italic nil :weight normal ))))
+   ;; `(wl-highlight-summary-displaying-face             ((t (:underline t :bold nil :italic nil :weight normal ))))
+   ;; `(wl-highlight-summary-disposed-face               ((t (:foreground ,my:n:white :bold nil :italic nil :weight normal ))))
+   ;; `(wl-highlight-summary-flagged-face                ((t (:foreground ,my:h:yellow :bold nil :italic nil :weight normal ))))
+   ;; `(wl-highlight-summary-forwarded-face              ((t (:foreground ,my:h:blue :bold nil :italic nil :weight normal ))))
+   ;; `(wl-highlight-summary-high-read-face              ((t (:foreground ,my:h:green :bold nil :italic nil :weight normal ))))
+   ;; `(wl-highlight-summary-high-unread-face            ((t (:foreground ,my:h:orange :bold nil :italic nil :weight normal ))))
+   ;; `(wl-highlight-summary-important-face              ((t (:foreground ,my:n:cyan :bold nil :italic nil :weight normal ))))
+   ;; `(wl-highlight-summary-important-flag-face         ((t (:foreground ,my:n:yellow :bold nil :italic nil :weight normal ))))
+   ;; `(wl-highlight-summary-killed-face                 ((t (:foreground ,my:l:white :bold nil :italic nil :weight normal ))))
+   ;; `(wl-highlight-summary-l:read-face                 ((t (:foreground ,my:n:green :bold nil :italic nil :weight normal ))))
+   ;; `(wl-highlight-summary-l:unread-face               ((t (:foreground ,my:h:lightblue :bold nil :italic nil :weight normal ))))
+   ;; `(wl-highlight-summary-new-face                    ((t (:foreground ,my:n:red :bold nil :italic nil :weight normal ))))
+   ;; `(wl-highlight-summary-normal-face                 ((t (:foreground ,my:h:white :bold nil :italic nil :weight normal ))))
+   ;; `(wl-highlight-summary-prefetch-face               ((t (:foreground ,my:n:blue :bold nil :italic nil :weight normal ))))
+   ;; `(wl-highlight-summary-refiled-face                ((t (:foreground ,my:n:green :bold nil :italic nil :weight normal ))))
+   ;; `(wl-highlight-summary-resend-face                 ((t (:foreground ,my:h:orange :bold nil :italic nil :weight normal ))))
+   ;; `(wl-highlight-summary-target-face                 ((t (:foreground ,my:n:cyan :bold nil :italic nil :weight normal ))))
+   ;; `(wl-highlight-summary-temp-face                   ((t (:foreground ,my:n:violet :bold nil :italic nil :weight normal ))))
+   ;; `(wl-highlight-summary-thread-top-face             ((t (:foreground ,my:h:white :bold nil :italic nil :weight normal ))))
+   ;; `(wl-highlight-summary-unread-face                 ((t (:foreground ,my:n:red :bold nil :italic nil :weight normal ))))
+   ;; `(wl-highlight-thread-indent-face                  ((t (:underline t :bold nil :italic nil :weight normal ))))
 
    ;; ----------------------------------------------------------------------
    ;; anything
@@ -371,12 +363,12 @@
    ;; anything-buffer-saved-out
    ;; anything-candidate-number
    ;; anything-emms-playlist
-   `(anything-ff-directory ((t (:bold t :foreground ,my:h:lightblue :background nil))))
-   `(anything-ff-executable ((t (:bold t :foreground ,my:h:emerald ))))
-   `(anything-ff-file ((t (:bold t :foreground ,my:h:white :background nil))))
-   `(anything-ff-invalid-symlink ((t (:bold t :foreground ,my:h:red :background nil))))
-   `(anything-ff-prefix ((t (:bold nil))))
-   `(anything-ff-symlink ((t (:bold t :foreground ,my:h:cyan :background nil))))
+   ;; `(anything-ff-directory ((t (:bold t :foreground ,my:h:lightblue :background nil))))
+   ;; `(anything-ff-executable ((t (:bold t :foreground ,my:h:emerald ))))
+   ;; `(anything-ff-file ((t (:bold t :foreground ,my:h:white :background nil))))
+   ;; `(anything-ff-invalid-symlink ((t (:bold t :foreground ,my:h:red :background nil))))
+   ;; `(anything-ff-prefix ((t (:bold nil))))
+   ;; `(anything-ff-symlink ((t (:bold t :foreground ,my:h:cyan :background nil))))
    ;; anything-gentoo-match-face
    ;; anything-grep-file
    ;; anything-grep-finish
@@ -437,12 +429,12 @@
    ;; ----------------------------------------------------------------------
    ;; zlc
    ;; ----------------------------------------------------------------------
-   `(zlc-selected-completion-face ((t (:inherit default :background ,my:h:black :bold t ))))
+   ;; `(zlc-selected-completion-face ((t (:inherit default :background ,my:h:black :bold t ))))
 
    ;; ----------------------------------------------------------------------
    ;; yaicomplete
    ;; ----------------------------------------------------------------------
-   `(yaicomplete-completion-suffix-face ((t (:foreground ,my:h:black ))))
+   ;; `(yaicomplete-completion-suffix-face ((t (:foreground ,my:h:black ))))
 
    ;; ----------------------------------------------------------------------
    ;; tabbar
@@ -459,18 +451,18 @@
 
 ;; transparent background
 (cond
-  ((unless window-system)
-    (progn
-      (set-frame-parameter (selected-frame) 'alpha '(95 70))
-      (add-to-list 'default-frame-alist '(alpha 95 70))
-      (set-background-color "#242424")))
+ ((window-system)
+  (progn
+    (set-frame-parameter (selected-frame) 'alpha '(95 70))
+    (add-to-list 'default-frame-alist '(alpha 95 70))
+    (set-background-color "#242424")
+    ))
  (t
   (progn
     (load "term/xterm")
     (xterm-register-default-colors)
     (tty-set-up-initial-frame-faces))
   ))
-
 ;;;###autoload
 (when (boundp 'custom-theme-load-path)
   (add-to-list 'custom-theme-load-path
