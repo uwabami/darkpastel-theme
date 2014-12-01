@@ -7,7 +7,7 @@
 ;; URL: https://github.com/uwabami/darkpastel-theme
 ;; Version: 0.4
 ;; License: GPL-3+
-;; $Lastupdate: 2014-11-10 07:02:16$
+;; $Lastupdate: 2014-12-02 00:25:24$
 ;;
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -109,7 +109,7 @@
    ;; `(fringe                              ((t (:background ,my:l:black ))))
    ;; ffap
    ;; file-name-shadow
-   ;; `(fixed-pitch                         ((t (:inherit default :height 1.0 ))))
+   `(fixed-pitch                         ((t (:inherit default :height 1.0 ))))
    ;; glyphless-char
    ;; `(header-line                         ((t (:foreground ,my:n:green ))))
    ;; help-argument-name
@@ -140,7 +140,7 @@
    ;; `(trailing-whitespace                 ((t (:background ,my:h:red ))))
    ;; tool-bar
    ;; underline
-   ;; `(variable-pitch                      ((t (:inherit default :height 1.0 ))))
+   `(variable-pitch                      ((t (:inherit default :height 1.0 ))))
    ;; vertical-border
    ;; `(warning                             ((t (:background nil :foreground ,my:h:red :underline t))))
    ;; `(hl-line                             ((t (:inherit highlight :underline t ))))
@@ -152,6 +152,28 @@
    ;; `(elscreen-tab-control-face    ((t (:background ,my:h:black :foreground ,my:h:blue ))))
    ;; `(elscreen-tab-current-screen-face ((t (:background ,my:h:black :foreground ,my:h:red :bold t))))
    ;; `(elscreen-tab-other-screen-face ((t  (:background ,my:h:black :foreground ,my:n:white ))))
+
+   ;; ----------------------------------------------------------------------
+   ;; calfw
+   ;; ----------------------------------------------------------------------
+   ;; `(cfw:face-annotation         ((t ( ))))
+   ;; `(cfw:face-day-title          ((t ( ))))
+   ;; `(cfw:face-default-content    ((t ( ))))
+   ;; `(cfw:face-default-day        ((t ( ))))
+   ;; `(cfw:face-disable            ((t ( ))))
+   ;; `(cfw:face-grid               ((t ( ))))
+   `(cfw:face-header             ((t (:inherit default ))))
+   `(cfw:face-holiday              ((t (:inherit cfw:face-sunday ))))
+   ;; `(cfw:face-periods            ((t ( ))))
+  `(cfw:face-saturday              ((t (:inherit default :foreground ,my:h:lightb :bold t ))))
+   ;; `(cfw:face-select             ((t ( ))))
+  `(cfw:face-sunday                ((t (:inherit default :foreground ,my:h:red :bold t ))))
+  `(cfw:face-title                 ((t (:inherit default :height 1.0  ))))
+   ;; `(cfw:face-today              ((t ( ))))
+   ;; `(cfw:face-today-title        ((t ( ))))
+   `(cfw:face-toolbar               ((t (:inherit default ))))
+   `(cfw:face-toolbar-button-off    ((t (:inherit default ))))
+   `(cfw:face-toolbar-button-on     ((t (:inherit default :bold t :underline t))))
 
    ;; ----------------------------------------------------------------------
    ;; howm
