@@ -7,7 +7,7 @@
 ;; URL: https://github.com/uwabami/darkpastel-theme
 ;; Version: 0.4
 ;; License: GPL-3+
-;; $Lastupdate: 2014-12-02 00:25:24$
+;; $Lastupdate: 2015-03-17 17:53:47$
 ;;
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -220,14 +220,14 @@
    ;; ----------------------------------------------------------------------
    ;; outline
    ;; ----------------------------------------------------------------------
-   ;; `(outline-1  ((t (:bold t :foreground ,my:h:yellow  ))))
-   ;; `(outline-2  ((t (:bold t :foreground ,my:h:red     ))))
-   ;; `(outline-3  ((t (:bold t :foreground ,my:h:emerald ))))
-   ;; `(outline-4  ((t (:bold t :foreground ,my:h:magenta ))))
-   ;; `(outline-5  ((t (:bold t :foreground ,my:h:purple  ))))
-   ;; `(outline-6  ((t (:bold t :foreground ,my:h:cyan    ))))
-   ;; `(outline-7  ((t (:bold t :foreground ,my:h:orange  ))))
-   ;; `(outline-8  ((t (:bold t :foreground ,my:h:black   ))))
+   `(outline-1  ((t (:bold t :foreground ,my:h:yellow  ))))
+   `(outline-2  ((t (:bold t :foreground ,my:h:emerald ))))
+   `(outline-3  ((t (:bold t :foreground ,my:h:orange  ))))
+   `(outline-4  ((t (:bold t :foreground ,my:h:red     ))))
+   `(outline-5  ((t (:bold t :foreground ,my:h:lightb  ))))
+   `(outline-6  ((t (:bold t :foreground ,my:h:violet  ))))
+   `(outline-7  ((t (:bold t :foreground ,my:h:purple  ))))
+   `(outline-8  ((t (:bold t :foreground ,my:n:white   ))))
 
    ;; ----------------------------------------------------------------------
    ;; org-mode
@@ -275,14 +275,14 @@
    ;; org-headline-done
    ;; org-hide
    ;; org-latex-and-related
-   ;; `(org-level-1  ((t (:inherit outline-1 ))))
-   ;; `(org-level-2  ((t (:inherit outline-2 ))))
-   ;; `(org-level-3  ((t (:inherit outline-3 ))))
-   ;; `(org-level-4  ((t (:inherit outline-4 ))))
-   ;; `(org-level-5  ((t (:inherit outline-5 ))))
-   ;; `(org-level-6  ((t (:inherit outline-6 ))))
-   ;; `(org-level-7  ((t (:inherit outline-7 ))))
-   ;; `(org-level-8  ((t (:inherit outline-8 ))))
+   `(org-level-1  ((t (:inherit outline-1 ))))
+   `(org-level-2  ((t (:inherit outline-2 ))))
+   `(org-level-3  ((t (:inherit outline-3 ))))
+   `(org-level-4  ((t (:inherit outline-4 ))))
+   `(org-level-5  ((t (:inherit outline-5 ))))
+   `(org-level-6  ((t (:inherit outline-6 ))))
+   `(org-level-7  ((t (:inherit outline-7 ))))
+   `(org-level-8  ((t (:inherit outline-8 ))))
    ;; `(org-link     ((t (:inherit link ))))
    ;; org-list-dt
    ;; org-macro
@@ -340,12 +340,12 @@
    ;; `(wl-highlight-message-headers                     ((t (:foreground ,my:n:cyan :bold t :italic nil ))))
    ;; `(wl-highlight-message-important-header-contents   ((t (:foreground ,my:n:magenta :bold t :italic nil ))))
    ;; `(wl-highlight-message-important-header-contents2  ((t (:foreground ,my:n:red :bold nil :italic nil ))))
-   ;; `(wl-highlight-message-signature                   ((t (:foreground ,my:l:white :bold nil :italic nil ))))
+   ;; `(wl-highlight-message-signature                   ((t (:foreground ,my:h:black :bold nil :italic nil ))))
    ;; `(wl-highlight-message-subject-header-contents     ((t (:foreground ,my:n:red :bold t :italic nil ))))
    ;; `(wl-highlight-message-unimportant-header-contents ((t (:foreground ,my:n:white :bold nil :italic nil ))))
    ;; `(wl-highlight-summary-answered-face               ((t (:foreground ,my:n:cyan :bold nil :italic nil :weight normal ))))
    ;; `(wl-highlight-summary-copied-face                 ((t (:foreground ,my:n:cyan :bold nil :italic nil :weight normal ))))
-   ;; `(wl-highlight-summary-deleted-face                ((t (:foreground ,my:l:white :bold nil :italic nil :weight normal ))))
+   ;; `(wl-highlight-summary-deleted-face                ((t (:foreground ,my:h:black :bold nil :italic nil :weight normal ))))
    ;; `(wl-highlight-summary-displaying-face             ((t (:underline t :bold nil :italic nil :weight normal ))))
    ;; `(wl-highlight-summary-disposed-face               ((t (:foreground ,my:n:white :bold nil :italic nil :weight normal ))))
    ;; `(wl-highlight-summary-flagged-face                ((t (:foreground ,my:h:yellow :bold nil :italic nil :weight normal ))))
@@ -354,9 +354,9 @@
    ;; `(wl-highlight-summary-high-unread-face            ((t (:foreground ,my:h:orange :bold nil :italic nil :weight normal ))))
    ;; `(wl-highlight-summary-important-face              ((t (:foreground ,my:n:cyan :bold nil :italic nil :weight normal ))))
    ;; `(wl-highlight-summary-important-flag-face         ((t (:foreground ,my:n:yellow :bold nil :italic nil :weight normal ))))
-   ;; `(wl-highlight-summary-killed-face                 ((t (:foreground ,my:l:white :bold nil :italic nil :weight normal ))))
+   ;; `(wl-highlight-summary-killed-face                 ((t (:foreground ,my:h:black :bold nil :italic nil :weight normal ))))
    ;; `(wl-highlight-summary-l:read-face                 ((t (:foreground ,my:n:green :bold nil :italic nil :weight normal ))))
-   ;; `(wl-highlight-summary-l:unread-face               ((t (:foreground ,my:h:lightblue :bold nil :italic nil :weight normal ))))
+   ;; `(wl-highlight-summary-l:unread-face               ((t (:foreground ,my:h:lightb :bold nil :italic nil :weight normal ))))
    ;; `(wl-highlight-summary-new-face                    ((t (:foreground ,my:n:red :bold nil :italic nil :weight normal ))))
    ;; `(wl-highlight-summary-normal-face                 ((t (:foreground ,my:h:white :bold nil :italic nil :weight normal ))))
    ;; `(wl-highlight-summary-prefetch-face               ((t (:foreground ,my:n:blue :bold nil :italic nil :weight normal ))))
